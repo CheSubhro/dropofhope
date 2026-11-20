@@ -40,11 +40,13 @@ export const homeMock = {
     badge: { value: '12K+', label: 'Lives touched' },
     points: ['Free registration', 'Safe & verified camps', 'Available 24/7'],
   },
-  stats: [
-    { id: 1, label: 'Active Users', value: '12K+' },
-    { id: 2, label: 'Items Published', value: '350+' },
-    { id: 3, label: 'Countries', value: '24' },
-    { id: 4, label: 'Satisfaction', value: '98%' },
+    quickLinks: [
+    { id: 1, label: 'Register as a Donor', icon: 'UserPlus', to: '/donor-registration' },
+    { id: 2, label: 'Organize a Blood Camp', icon: 'Tent', to: '/organize-camp' },
+    { id: 3, label: 'Find a Doctor', icon: 'Stethoscope', to: '/find-doctor' },
+    { id: 4, label: 'Request Blood for Patient', icon: 'Droplet', to: '/request-blood' },
+    { id: 5, label: 'Download Certificate', icon: 'FileDown', to: '/download-certificate' },
+    { id: 6, label: 'Join as a Member', icon: 'Users', to: '/join-member' },
   ],
   featured: {
     title: 'Featured Items',

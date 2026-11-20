@@ -25,7 +25,7 @@ const { data, loading, error, reload } = useAsyncData(getHomeData)
 
   <template v-else>
     <HeroSection :hero="data.hero" />
-    <StatsBar :stats="data.stats" />
+    <StatsBar :links="data.quickLinks" />
     <FeaturedGrid :featured="data.featured" />
     <TestimonialList :testimonials="data.testimonials" />
   </template>
