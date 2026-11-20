@@ -16,12 +16,50 @@ export const siteMock = {
     { id: 2, text: 'Next blood donation camp: 15th December, Community Hall.' },
     { id: 3, text: 'Register as a donor today and save a life.' },
   ],
-  footer: {
-    tagline: 'A short description of your brand goes here.',
+    footer: {
+    tagline: 'Be the reason someone smiles tomorrow. Donate blood, save lives.',
+        contact: {
+      phone: '+91 98765 43210',
+      email: 'info@dropofhope.org',
+      address: 'City Center, Durgapur, West Bengal, India',
+    },
+    socials: [
+      { id: 1, name: 'Facebook', href: 'https://facebook.com' },
+      { id: 2, name: 'Instagram', href: 'https://instagram.com' },
+      { id: 3, name: 'WhatsApp', href: 'https://wa.me/919876543210' },
+    ],
+    legal: [
+      { label: 'Privacy Policy', to: '/privacy' },
+      { label: 'Terms & Conditions', to: '/terms' },
+    ],
     columns: [
-      { title: 'Company', links: [{ label: 'About', href: '#' }, { label: 'Careers', href: '#' }] },
-      { title: 'Resources', links: [{ label: 'Blog', href: '#' }, { label: 'Help Center', href: '#' }] },
-      { title: 'Legal', links: [{ label: 'Privacy', href: '#' }, { label: 'Terms', href: '#' }] },
+      {
+        title: 'Quick Links',
+        links: [
+          { label: 'Home', to: '/' },
+          { label: 'About Us', to: '/about' },
+          { label: 'Blog', to: '/blog' },
+          { label: 'Gallery', to: '/gallery' },
+        ],
+      },
+      {
+        title: 'Get Involved',
+        links: [
+          { label: 'Donor Registration', to: '/donor-registration' },
+          { label: 'Camp Registration', to: '/camp-registration' },
+          { label: 'Request Blood', to: '/request-blood' },
+          { label: 'Join as a Member', to: '/join-member' },
+        ],
+      },
+      {
+        title: 'Resources',
+        links: [
+          { label: 'Find a Doctor', to: '/find-doctor' },
+          { label: 'Download Certificate', to: '/download-certificate' },
+          { label: 'Organize a Blood Camp', to: '/organize-camp' },
+          { label: 'Donate', to: '/donate' },
+        ],
+      },
     ],
   },
 }

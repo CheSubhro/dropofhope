@@ -21,6 +21,8 @@ export default createRouter({
         { path: 'request-blood', name: 'request-blood', meta: { title: 'Request Blood for Patient' }, component: () => import('@/views/PlaceholderView.vue') },
         { path: 'download-certificate', name: 'download-certificate', meta: { title: 'Download Certificate' }, component: () => import('@/views/PlaceholderView.vue') },
         { path: 'join-member', name: 'join-member', meta: { title: 'Join as a Member' }, component: () => import('@/views/PlaceholderView.vue') },
+        { path: 'privacy', name: 'privacy', meta: { title: 'Privacy Policy' }, component: () => import('@/views/PlaceholderView.vue') },
+        { path: 'terms', name: 'terms', meta: { title: 'Terms & Conditions' }, component: () => import('@/views/PlaceholderView.vue') },
       ],
     },
     // later: { path: '/admin', component: AdminLayout, meta: { requiresAuth: true }, children: [...] }
