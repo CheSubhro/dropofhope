@@ -71,17 +71,36 @@ export const homeMock = {
       ],
     },
   },
-  featured: {
-    title: 'Featured Items',
-    subtitle: 'A short line introducing this section.',
-    items: Array.from({ length: 6 }, (_, i) => ({
-      id: i + 1,
-      title: `Featured Item ${i + 1}`,
-      description: 'A brief description of this item, kept to two or three lines.',
-      category: ['General', 'Popular', 'New'][i % 3],
-      image: null, // later: a real URL from the API
-      href: `/items/${i + 1}`,
-    })),
+    features: {
+    title: 'Features',
+    subtitle: 'Everything happening in our community, in one place.',
+    camps: {
+      title: 'Upcoming Blood Camps',
+      link: { label: 'View all camps', to: '/camp-registration' },
+      items: [
+        { id: 1, name: 'City Community Hall Camp', day: '05', month: 'Dec', time: '9:00 AM - 3:00 PM', location: 'City Community Hall', to: '/camp-registration' },
+        { id: 2, name: 'University Blood Drive', day: '15', month: 'Dec', time: '10:00 AM - 4:00 PM', location: 'Main University Campus', to: '/camp-registration' },
+        { id: 3, name: 'Winter Donation Camp', day: '28', month: 'Dec', time: '9:30 AM - 2:30 PM', location: 'Town Library Ground', to: '/camp-registration' },
+      ],
+    },
+    requests: {
+      title: 'Urgent Blood Requests',
+      link: { label: 'View all requests', to: '/request-blood' },
+      items: [
+        { id: 1, group: 'O-', patient: 'Patient A', units: 2, hospital: 'City General Hospital', location: 'Durgapur', to: '/request-blood' },
+        { id: 2, group: 'B+', patient: 'Patient B', units: 3, hospital: 'Medical College Hospital', location: 'Durgapur', to: '/request-blood' },
+        { id: 3, group: 'A+', patient: 'Patient C', units: 1, hospital: 'Care Nursing Home', location: 'Asansol', to: '/request-blood' },
+      ],
+    },
+    feed: {
+      title: 'Social Feed',
+      link: { label: 'Read our blog', to: '/blog' },
+      items: [
+        { id: 1, author: 'DropOfHope', time: '2h ago', text: 'Thank you to everyone who donated at last weekend\'s camp. 120 units collected!', likes: 245 },
+        { id: 2, author: 'DropOfHope', time: '1d ago', text: 'Reminder: you can donate blood every 3 months. Register as a donor today.', likes: 132 },
+        { id: 3, author: 'DropOfHope', time: '3d ago', text: 'Meet our new volunteers who joined this month. Welcome to the family!', likes: 98 },
+      ],
+    },
   },
   testimonials: [
     { id: 1, quote: 'This is a placeholder testimonial that shows how real feedback will look.', author: 'Jane Doe', role: 'Customer' },

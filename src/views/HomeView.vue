@@ -28,7 +28,7 @@ const { data, loading, error, reload } = useAsyncData(getHomeData)
     <HeroSection :hero="data.hero" />
     <StatsBar :links="data.quickLinks" />
     <AboutSection :section="data.aboutSection" />
-    <FeaturedGrid :featured="data.featured" />
+    <FeaturedGrid :features="data.features" />
     <TestimonialList :testimonials="data.testimonials" />
   </template>
 </template>
