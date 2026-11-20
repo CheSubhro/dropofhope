@@ -1,14 +1,16 @@
 export const siteMock = {
   name: 'DropOfHope',
   tagline: 'Every drop makes a difference',
-  logo: null,
-  nav: [
-    { label: 'Home', href: '/' },
-    { label: 'Features', href: '#featured' },
-    { label: 'Testimonials', href: '#testimonials' },
-    { label: 'Contact', href: '#contact' },
+  logo: null, // /logo.png
+    nav: [
+    { label: 'Home', to: '/' },
+    { label: 'Donor Reg', to: '/donor-registration' },
+    { label: 'Camp Reg', to: '/camp-registration' },
+    { label: 'About Us', to: '/about' },
+    { label: 'Blog', to: '/blog' },
+    { label: 'Gallery', to: '/gallery' },
   ],
-  cta: { label: 'Get Started', href: '#contact' },
+  cta: { label: 'Donate', to: '/donate' },
   footer: {
     tagline: 'A short description of your brand goes here.',
     columns: [
