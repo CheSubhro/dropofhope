@@ -9,8 +9,8 @@ defineProps({ hero: { type: Object, required: true } })
 
     <div class="relative mx-auto grid max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:gap-8 lg:px-8 lg:py-24">
       <div class="text-center lg:text-left">
-        <span class="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-rose-600 shadow-sm ring-1 ring-rose-100">
-          <span class="h-2 w-2 animate-pulse rounded-full bg-rose-500"></span>
+        <span class="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-[#E80E0E] shadow-sm ring-1 ring-[#E80E0E]/20">
+          <span class="h-2 w-2 animate-pulse rounded-full bg-[#E80E0E]"></span>
           {{ hero.eyebrow }}
         </span>
 
