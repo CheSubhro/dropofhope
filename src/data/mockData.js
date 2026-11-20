@@ -48,6 +48,29 @@ export const homeMock = {
     { id: 5, label: 'Download Certificate', icon: 'FileDown', to: '/download-certificate' },
     { id: 6, label: 'Join as a Member', icon: 'Users', to: '/join-member' },
   ],
+    aboutSection: {
+    image: {
+      src: '/hero.jpg', 
+      alt: 'Our team',
+      title: "Who's Who",
+      subtitle: 'The people behind every connection.',
+      link: { label: 'Meet the team', to: '/about' },
+    },
+    about: {
+      title: 'About DropOfHope',
+      text: 'DropOfHope is a community-driven voluntary blood donation platform. We bridge the gap between willing donors and patients in urgent need—organizing safe donation drives and ensuring every drop saves a life.At DropOfHope, we believe no life should be lost waiting for blood. As a dedicated voluntary donor network, we connect compassionate everyday heroes with patients during critical moments, host safe community blood camps, and turn every single donation into a second chance at life.',
+      link: { label: 'Read more about us', to: '/about' },
+    },
+    slider: {
+      title: 'Our Stories',
+      link: { label: 'View gallery', to: '/gallery' },
+      slides: [
+        { id: 1, title: 'Donation camp success', text: '120 units collected in one day.', image:'/hero.jpg' },
+        { id: 2, title: 'Emergency response', text: 'Matched donors in under an hour.', image:'/hero.jpg' },
+        { id: 3, title: 'Volunteer drive', text: 'New members joined this month.', image:'/hero.jpg' },
+      ],
+    },
+  },
   featured: {
     title: 'Featured Items',
     subtitle: 'A short line introducing this section.',

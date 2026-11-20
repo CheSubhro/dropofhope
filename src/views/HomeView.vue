@@ -3,6 +3,7 @@ import { getHomeData } from '@/services/contentService'
 import { useAsyncData } from '@/composables/useAsyncData'
 import HeroSection from '@/components/home/HeroSection.vue'
 import StatsBar from '@/components/home/StatsBar.vue'
+import AboutSection from '@/components/home/AboutSection.vue'
 import FeaturedGrid from '@/components/home/FeaturedGrid.vue'
 import TestimonialList from '@/components/home/TestimonialList.vue'
 
@@ -26,6 +27,7 @@ const { data, loading, error, reload } = useAsyncData(getHomeData)
   <template v-else>
     <HeroSection :hero="data.hero" />
     <StatsBar :links="data.quickLinks" />
+    <AboutSection :section="data.aboutSection" />
     <FeaturedGrid :featured="data.featured" />
     <TestimonialList :testimonials="data.testimonials" />
   </template>
