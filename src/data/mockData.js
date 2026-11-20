@@ -1,5 +1,7 @@
 export const siteMock = {
-  name: 'Brandname',
+  name: 'DropOfHope',
+  tagline: 'Every drop makes a difference',
+  logo: null,
   nav: [
     { label: 'Home', href: '/' },
     { label: 'Features', href: '#featured' },
