@@ -15,8 +15,8 @@ defineProps({ features: { type: Object, required: true } })
       <div class="mt-12 grid gap-6 lg:grid-cols-3">
         <!-- Upcoming Blood Camps -->
         <article class="flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-          <header class="flex items-center gap-3 border-b border-slate-100 bg-rose-50 px-5 py-4">
-            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-rose-600 text-white">
+          <header class="flex items-center gap-3 border-b border-slate-100 bg-[#E80E0E]/10 px-5 py-4">
+            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#E80E0E] text-white">
               <CalendarDays :size="20" />
             </span>
             <h3 class="text-lg font-bold text-slate-900">{{ features.camps.title }}</h3>
@@ -24,8 +24,8 @@ defineProps({ features: { type: Object, required: true } })
 
           <ul class="flex-1 divide-y divide-slate-100">
             <li v-for="c in features.camps.items" :key="c.id">
-              <RouterLink :to="c.to" class="flex items-center gap-4 px-5 py-4 transition hover:bg-rose-50/60">
-                <span class="flex h-14 w-14 shrink-0 flex-col items-center justify-center rounded-xl bg-rose-100 text-rose-700">
+              <RouterLink :to="c.to" class="flex items-center gap-4 px-5 py-4 transition hover:bg-[#E80E0E]/5">
+                <span class="flex h-14 w-14 shrink-0 flex-col items-center justify-center rounded-xl bg-[#E80E0E]/10 text-[#E80E0E]">
                   <span class="text-xl font-extrabold leading-none">{{ c.day }}</span>
                   <span class="text-[11px] font-semibold uppercase">{{ c.month }}</span>
                 </span>
@@ -39,15 +39,15 @@ defineProps({ features: { type: Object, required: true } })
           </ul>
 
           <RouterLink :to="features.camps.link.to"
-                      class="flex items-center justify-center gap-1 border-t border-slate-100 px-5 py-3 text-sm font-semibold text-rose-600 hover:bg-rose-50">
+                      class="flex items-center justify-center gap-1 border-t border-slate-100 px-5 py-3 text-sm font-semibold text-[#E80E0E] hover:bg-[#E80E0E]/5">
             {{ features.camps.link.label }} <ArrowRight :size="16" />
           </RouterLink>
         </article>
 
         <!-- Urgent Blood Requests -->
         <article class="flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-          <header class="flex items-center gap-3 border-b border-slate-100 bg-rose-50 px-5 py-4">
-            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-rose-600 text-white">
+          <header class="flex items-center gap-3 border-b border-slate-100 bg-[#E80E0E]/10 px-5 py-4">
+            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#E80E0E] text-white">
               <Droplet :size="20" />
             </span>
             <h3 class="text-lg font-bold text-slate-900">{{ features.requests.title }}</h3>
@@ -55,8 +55,8 @@ defineProps({ features: { type: Object, required: true } })
 
           <ul class="flex-1 divide-y divide-slate-100">
             <li v-for="r in features.requests.items" :key="r.id">
-              <RouterLink :to="r.to" class="flex items-center gap-4 px-5 py-4 transition hover:bg-rose-50/60">
-                <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-rose-600 text-lg font-extrabold text-white shadow">
+              <RouterLink :to="r.to" class="flex items-center gap-4 px-5 py-4 transition hover:bg-[#E80E0E]/5">
+                <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#E80E0E] text-lg font-extrabold text-white shadow">
                   {{ r.group }}
                 </span>
                 <span class="min-w-0">
@@ -69,7 +69,7 @@ defineProps({ features: { type: Object, required: true } })
           </ul>
 
           <RouterLink :to="features.requests.link.to"
-                      class="flex items-center justify-center gap-1 border-t border-slate-100 px-5 py-3 text-sm font-semibold text-rose-600 hover:bg-rose-50">
+                      class="flex items-center justify-center gap-1 border-t border-slate-100 px-5 py-3 text-sm font-semibold text-[#E80E0E] hover:bg-[#E80E0E]/5">
             {{ features.requests.link.label }} <ArrowRight :size="16" />
           </RouterLink>
         </article>
@@ -93,7 +93,7 @@ defineProps({ features: { type: Object, required: true } })
                 <span class="ml-auto text-xs text-slate-400">{{ p.time }}</span>
               </div>
               <p class="mt-2 text-sm leading-relaxed text-slate-600">{{ p.text }}</p>
-              <span class="mt-2 inline-flex items-center gap-1 text-xs font-medium text-rose-500">
+              <span class="mt-2 inline-flex items-center gap-1 text-xs font-medium text-[#E80E0E]">
                 <Heart :size="14" fill="currentColor" /> {{ p.likes }}
               </span>
             </li>
