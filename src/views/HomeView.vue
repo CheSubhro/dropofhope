@@ -5,6 +5,7 @@ import HeroSection from '@/components/home/HeroSection.vue'
 import StatsBar from '@/components/home/StatsBar.vue'
 import AboutSection from '@/components/home/AboutSection.vue'
 import FeaturedGrid from '@/components/home/FeaturedGrid.vue'
+import ImpactSection from '@/components/home/ImpactSection.vue'
 import TestimonialList from '@/components/home/TestimonialList.vue'
 
 const { data, loading, error, reload } = useAsyncData(getHomeData)
@@ -29,6 +30,7 @@ const { data, loading, error, reload } = useAsyncData(getHomeData)
     <StatsBar :links="data.quickLinks" />
     <AboutSection :section="data.aboutSection" />
     <FeaturedGrid :features="data.features" />
+    <ImpactSection :impact="data.impact" />
     <TestimonialList :testimonials="data.testimonials" />
   </template>
 </template>

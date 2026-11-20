@@ -102,6 +102,16 @@ export const homeMock = {
       ],
     },
   },
+    impact: {
+    title: 'Our Impact So Far',
+    items: [
+      { id: 1, value: 12500, label: 'Registered Donors', icon: 'Users' },
+      { id: 2, value: 8300, label: 'Units of Blood', icon: 'Droplet' },
+      { id: 3, value: 45, label: 'Partner Hospitals', icon: 'Hospital' },
+      { id: 4, value: 20, label: 'CSR Partners', icon: 'Handshake' },
+      { id: 5, value: 18, label: 'Districts Covered', icon: 'MapPinned' },
+    ],
+  },
   testimonials: [
     { id: 1, quote: 'This is a placeholder testimonial that shows how real feedback will look.', author: 'Jane Doe', role: 'Customer' },
     { id: 2, quote: 'Another placeholder quote. Short, specific and believable works best.', author: 'John Smith', role: 'Partner' },
