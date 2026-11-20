@@ -34,7 +34,7 @@ function submitSearch() {
         </span>
         <span class="flex flex-col leading-tight">
           <span class="text-2xl font-extrabold tracking-tight">
-            <span class="text-rose-600">Drop</span><span class="text-slate-700">Of</span><span class="text-emerald-600">Hope</span>
+            <span class="text-[#E80E0E]">Drop</span><span class="text-slate-700">Of</span><span class="text-emerald-600">Hope</span>
           </span>
           <span class="text-xs font-semibold text-slate-600">{{ site.tagline }}</span>
         </span>
@@ -48,8 +48,8 @@ function submitSearch() {
                :aria-current="(link.to === '/' ? isExactActive : isActive) ? 'page' : undefined"
                class="rounded-full px-4 py-2 text-sm font-semibold transition-all duration-200"
                :class="(link.to === '/' ? isExactActive : isActive)
-                 ? 'bg-rose-600 text-white shadow-md shadow-rose-500/30'
-                 : 'text-slate-800 hover:bg-rose-50 hover:text-rose-600'">
+                 ? 'bg-[#E80E0E] text-white shadow-md shadow-[#E80E0E]/30'
+                 : 'text-slate-800 hover:bg-[#E80E0E]/10 hover:text-[#E80E0E]'">
               {{ link.label }}
             </a>
           </RouterLink>
@@ -104,8 +104,8 @@ function submitSearch() {
         <a :href="href" @click="navigate(); open = false"
            class="mb-1 block rounded-lg px-4 py-2.5 text-sm font-semibold"
            :class="(link.to === '/' ? isExactActive : isActive)
-             ? 'bg-rose-600 text-white'
-             : 'text-slate-800 hover:bg-[#E2798B] hover:text-white'">
+             ? 'bg-[#E80E0E] text-white'
+             : 'text-slate-800 hover:bg-[#E80E0E]/10 hover:text-[#E80E0E]'">
           {{ link.label }}
         </a>
       </RouterLink>
