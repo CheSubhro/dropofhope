@@ -7,7 +7,16 @@ export default createRouter({
     {
       path: '/',
       component: PublicLayout,
-      children: [{ path: '', name: 'home', component: () => import('@/views/HomeView.vue') }],
+      children: [
+        { path: '', name: 'home', component: () => import('@/views/HomeView.vue') },
+        { path: 'donor-registration', name: 'donor-reg', meta: { title: 'Donor Registration' }, component: () => import('@/views/PlaceholderView.vue') },
+        { path: 'camp-registration', name: 'camp-reg', meta: { title: 'Camp Registration' }, component: () => import('@/views/PlaceholderView.vue') },
+        { path: 'about', name: 'about', meta: { title: 'About Us' }, component: () => import('@/views/PlaceholderView.vue') },
+        { path: 'blog', name: 'blog', meta: { title: 'Blog' }, component: () => import('@/views/PlaceholderView.vue') },
+        { path: 'gallery', name: 'gallery', meta: { title: 'Gallery' }, component: () => import('@/views/PlaceholderView.vue') },
+        { path: 'donate', name: 'donate', meta: { title: 'Donate' }, component: () => import('@/views/PlaceholderView.vue') },
+        { path: 'search', name: 'search', meta: { title: 'Search' }, component: () => import('@/views/PlaceholderView.vue') },
+      ],
     },
     // later: { path: '/admin', component: AdminLayout, meta: { requiresAuth: true }, children: [...] }
   ],
