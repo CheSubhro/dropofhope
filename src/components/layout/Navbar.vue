@@ -7,7 +7,21 @@ const open = ref(false)
 <template>
   <header class="sticky top-0 z-40 border-b border-slate-200 bg-white/80 backdrop-blur">
     <nav class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-      <RouterLink to="/" class="text-xl font-bold text-brand-700">{{ site.name }}</RouterLink>
+      <!-- Logo + Brand name + Tagline -->
+      <RouterLink to="/" class="flex items-center gap-3">
+        <img v-if="site.logo" :src="site.logo" :alt="site.name" class="h-10 w-10 object-contain" />
+        <svg v-else class="h-10 w-10" viewBox="0 0 40 40" fill="none">
+          <path d="M20 4C20 4 8 17 8 25a12 12 0 0 0 24 0C32 17 20 4 20 4Z" fill="#e11d48" />
+          <path d="M20 14c-1.8 2.6-4 5.6-4 8.4a4 4 0 0 0 8 0c0-2.8-2.2-5.8-4-8.4Z" fill="#fff" opacity=".35" />
+        </svg>
+
+        <span class="flex flex-col leading-tight">
+          <span class="text-xl font-extrabold tracking-tight">
+            <span class="text-rose-600">Drop</span><span class="text-slate-500">Of</span><span class="text-emerald-600">Hope</span>
+          </span>
+          <span class="text-[11px] font-medium text-slate-500">{{ site.tagline }}</span>
+        </span>
+      </RouterLink>
 
       <ul class="hidden items-center gap-8 md:flex">
         <li v-for="link in site.nav" :key="link.label">
