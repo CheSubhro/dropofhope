@@ -35,7 +35,7 @@ export const homeMock = {
       'Become a voluntary blood donor or join our upcoming camps. Together we connect donors with those who need blood the most, quickly and safely.',
     primaryCta: { label: 'Become a Donor', to: '/donor-registration' },
     secondaryCta: { label: 'Join a Camp', to: '/camp-registration' },
-    image: '/blood.jpg', 
+    image: '/hero.jpg', 
     imageAlt: 'Blood donation',
     badge: { value: '12K+', label: 'Lives touched' },
     points: ['Free registration', 'Safe & verified camps', 'Available 24/7'],
