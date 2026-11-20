@@ -15,7 +15,7 @@ defineProps({ testimonials: { type: Object, required: true } })
       <div class="mt-12 grid gap-6 md:grid-cols-3">
         <figure v-for="t in testimonials.items" :key="t.id"
                 class="relative flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-          <Quote :size="32" class="text-rose-200" />
+          <Quote :size="32" class="text-[#E80E0E]/30" />
 
           <!-- Star rating -->
           <div class="mt-3 flex gap-0.5">
@@ -27,7 +27,7 @@ defineProps({ testimonials: { type: Object, required: true } })
 
           <figcaption class="mt-6 flex items-center gap-3 border-t border-slate-100 pt-4">
             <img v-if="t.image" :src="t.image" :alt="t.author" class="h-11 w-11 rounded-full object-cover" />
-            <span v-else class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-rose-600 font-bold text-white">
+            <span v-else class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#E80E0E] font-bold text-white">
               {{ t.author.charAt(0) }}
             </span>
 
@@ -40,7 +40,7 @@ defineProps({ testimonials: { type: Object, required: true } })
             </span>
 
             <span v-if="t.bloodGroup"
-                  class="rounded-full bg-rose-100 px-2.5 py-1 text-xs font-extrabold text-rose-700">
+                  class="rounded-full bg-[#E80E0E]/10 px-2.5 py-1 text-xs font-extrabold text-[#E80E0E]">
               {{ t.bloodGroup }}
             </span>
           </figcaption>
