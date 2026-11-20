@@ -4,13 +4,18 @@ export const siteMock = {
   logo: null, // /logo.png
     nav: [
     { label: 'Home', to: '/' },
-    { label: 'Donor Reg', to: '/donor-registration' },
-    { label: 'Camp Reg', to: '/camp-registration' },
+    { label: 'Donor Registration', to: '/donor-registration' },
+    { label: 'Camp Registration', to: '/camp-registration' },
     { label: 'About Us', to: '/about' },
     { label: 'Blog', to: '/blog' },
     { label: 'Gallery', to: '/gallery' },
   ],
   cta: { label: 'Donate', to: '/donate' },
+    notices: [
+    { id: 1, text: 'Urgent: O- blood needed at City Hospital. Please contact immediately.' },
+    { id: 2, text: 'Next blood donation camp: 15th December, Community Hall.' },
+    { id: 3, text: 'Register as a donor today and save a life.' },
+  ],
   footer: {
     tagline: 'A short description of your brand goes here.',
     columns: [
