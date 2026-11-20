@@ -27,13 +27,18 @@ export const siteMock = {
 }
 
 export const homeMock = {
-  hero: {
-    eyebrow: 'New · Version 1.0',
-    title: 'A clear headline that explains your value',
+    hero: {
+    eyebrow: 'Join our life-saving community',
+    title: 'Your one drop of blood can give',
+    highlight: 'someone a second life',
     subtitle:
-      'Supporting text that describes what you offer in one or two sentences. Replace this with your own message.',
-    primaryCta: { label: 'Get Started', href: '#featured' },
-    secondaryCta: { label: 'Learn More', href: '#testimonials' },
+      'Become a voluntary blood donor or join our upcoming camps. Together we connect donors with those who need blood the most, quickly and safely.',
+    primaryCta: { label: 'Become a Donor', to: '/donor-registration' },
+    secondaryCta: { label: 'Join a Camp', to: '/camp-registration' },
+    image: '/blood.jpg', 
+    imageAlt: 'Blood donation',
+    badge: { value: '12K+', label: 'Lives touched' },
+    points: ['Free registration', 'Safe & verified camps', 'Available 24/7'],
   },
   stats: [
     { id: 1, label: 'Active Users', value: '12K+' },
