@@ -1970,4 +1970,176 @@ export const organizePageMock = {
 
 
 
+export const privacyPageMock = {
+  title: 'Privacy Policy',
+  lastUpdated: '23 November 2026',
+  intro:
+    'DropOfHope respects your privacy. This Privacy Policy explains what information may be collected when you use our website and forms, why that information is used, how it may be shared, and what choices you may have. This draft applies to visitors, donors, patients or their representatives, camp organizers, members, doctors, and other people who contact us through the website.',
+  sections: [
+    {
+      id: 'information-we-collect',
+      title: 'Information We Collect',
+      paragraphs: [
+        'The information collected depends on the service or form you use. Please provide only information that is necessary for your request.',
+        'Depending on the form and the information you choose to provide, this may include:',
+      ],
+      bullets: [
+        'Donor registration: name, date of birth, gender, blood group, weight, phone number, email address, address, district, and answers to health-related eligibility questions.',
+        'Blood requests: requester contact details, patient details, required blood group and component, hospital information, location, urgency, and other information relevant to the request.',
+        'Blood camp applications: organizer name, organization details, contact information, proposed date, venue, expected donor count, and arrangements.',
+        'Membership applications: name, date of birth, contact details, address, profession, membership type, volunteering interests, availability, and experience.',
+        'Donation confirmation: donation date, donor or camp reference, confirmation details, and transaction reference such as UTR if submitted for verification.',
+        'Doctor applications: name, qualification, registration details, specialty, contact information, workplace, and supporting details.',
+        'Certificate searches: donor or certificate reference and other details requested by the certificate search form.',
+        'Messages and enquiries: information you include when contacting us through forms, email, phone, or other communication channels.',
+      ],
+    },
+    {
+      id: 'how-we-use-information',
+      title: 'How We Use Your Information',
+      paragraphs: [
+        'We use submitted information only for purposes connected with the service or communication for which it was provided, subject to applicable law and the choices or permissions you give us.',
+      ],
+      bullets: [
+        'To register and communicate with voluntary blood donors.',
+        'To help connect a blood requester with suitable donors or relevant organizations where appropriate.',
+        'To review and coordinate blood camp, membership, and volunteer applications.',
+        'To verify donation confirmations and certificate-related requests.',
+        'To review doctor directory submissions before any information is published.',
+        'To respond to enquiries, provide updates, and maintain service-related records.',
+        'To prevent misuse, investigate complaints, and comply with legal obligations.',
+      ],
+    },
+    {
+      id: 'sharing-information',
+      title: 'When We Share Information',
+      paragraphs: [
+        'Information may be shared only where it is reasonably necessary for the relevant purpose, where you have provided permission, or where disclosure is required or permitted by applicable law.',
+      ],
+      bullets: [
+        'Relevant donor contact details may be shared with a blood requester only where the donor has given the required permission and the sharing is necessary for the request.',
+        'Relevant request information may be shared with an appropriate hospital, blood bank, or coordinating organization to help handle the request.',
+        'Information may be shared with service providers who help operate the website or provide a requested service, where applicable safeguards and agreements are in place.',
+        'Information may be disclosed to a lawful authority when required by law or a valid legal process.',
+      ],
+      paragraphsAfter: [
+        'We do not intend to sell personal information or use it for third-party advertising. This statement must be reviewed if the organization later introduces advertising, commercial data sharing, or other new uses.',
+      ],
+    },
+    {
+      id: 'public-information',
+      title: 'Information Displayed Publicly',
+      paragraphs: [
+        'We aim to limit the personal information displayed on public pages. Public information should be limited to what is necessary for the relevant community purpose.',
+      ],
+      bullets: [
+        'Public blood request listings should not display a patient’s full name, personal phone number, full address, or other direct identifiers.',
+        'A donor’s phone number, email address, and home address should not be displayed publicly.',
+        'Doctor or organization directory information should be published only after the relevant submission has been reviewed and the required publication permission has been obtained.',
+        'Any public display of donor or requester information must follow the consent choices shown in the relevant form.',
+      ],
+      paragraphsAfter: [
+        'The actual website configuration and each form’s consent wording must match this policy before the website is launched.',
+      ],
+    },
+    {
+      id: 'data-retention',
+      title: 'How Long We Keep Information',
+      paragraphs: [
+        'We keep personal information only for as long as it is reasonably necessary for the purpose for which it was collected, to maintain appropriate records, or to meet legal requirements.',
+        'The following are proposed guidelines for review, not a statement that an automated deletion system is currently active:',
+      ],
+      bullets: [
+        'Unsuccessful or withdrawn applications: normally up to 12 months after closure, unless a longer period is required to resolve a dispute or meet a legal obligation.',
+        'Donor and member records: while the registration remains active and for a reasonable period after withdrawal, subject to applicable requirements.',
+        'Blood request records: normally up to 24 months after closure, unless a longer period is required for audit, safety, or legal reasons.',
+        'Donation and certificate records: may be retained for longer periods where needed to verify issued certificates and maintain reliable historical records.',
+        'Enquiries and routine communications: normally up to 12 months after the matter is closed, unless further retention is necessary.',
+      ],
+      paragraphsAfter: [
+        'Retention periods will be finalized when the organization has an operational record-management and deletion process. Information that is no longer required should be securely deleted or anonymized, subject to applicable law.',
+      ],
+    },
+    {
+      id: 'data-security',
+      title: 'How We Protect Information',
+      paragraphs: [
+        'We recognize that donor, patient, contact, and health-related information requires careful handling. We aim to use reasonable administrative, technical, and organizational measures appropriate to the information and the services provided.',
+        'The website is currently being developed and may use demonstration or mock data in some areas. We do not claim that production-grade security controls, encryption, access logging, backups, or automated deletion are active unless they have been implemented and verified.',
+        'Please avoid sending passwords, payment credentials, identity documents, or unrelated medical records through general enquiry forms.',
+      ],
+    },
+    {
+      id: 'your-rights',
+      title: 'Your Choices and Rights',
+      paragraphs: [
+        'Subject to applicable law and verification of your identity, you may contact us to make a request concerning your personal information.',
+      ],
+      bullets: [
+        'Ask whether we hold personal information about you and request access to it, where applicable.',
+        'Ask us to correct or update inaccurate or incomplete information.',
+        'Request deletion of information that is no longer required or that we are not legally required to retain.',
+        'Ask to withdraw a consent you previously provided. Withdrawal may affect our ability to provide a related service.',
+        'Ask for your donor listing to be removed from public display or request that your donor registration be deactivated.',
+        'Raise a concern or complaint about how your information has been handled.',
+      ],
+      paragraphsAfter: [
+        'To make a request, use the contact details in the Contact Us section and write “Privacy Request” in the subject line. Include enough information for us to identify the relevant record, but do not send passwords or unnecessary sensitive documents. We may ask for reasonable verification before acting on a request.',
+        'Some information may need to be retained where required by law or where necessary to establish, exercise, or defend legal claims. We will explain this where applicable.',
+      ],
+    },
+    {
+      id: 'cookies-storage',
+      title: 'Cookies and Browser Storage',
+      paragraphs: [
+        'This draft assumes that the current website does not use Google Analytics or other third-party analytics tools. The actual website should be checked before this statement is published.',
+        'The website or its hosting platform may use essential technical storage, such as session or security-related data, to make features work. If analytics, advertising cookies, embedded media, or other tracking technologies are added later, this policy should be updated and any required consent should be obtained.',
+        'You can manage cookies through your browser settings. Blocking essential storage may affect some website features.',
+      ],
+    },
+    {
+      id: 'children',
+      title: 'Children’s Information',
+      paragraphs: [
+        'Our donor and membership registration processes are intended for adults aged 18 years or older. People under 18 should not register as donors or members through these forms.',
+        'If you believe a child has submitted personal information through our website, please contact us so that we can review the matter and take appropriate action in accordance with applicable law.',
+      ],
+    },
+    {
+      id: 'third-party-services',
+      title: 'Third-Party Links and Services',
+      paragraphs: [
+        'Our website may contain links to third-party services such as UPI applications, social media platforms, map services, hospital websites, or other external resources.',
+        'When you visit or use a third-party service, that service may collect and process information under its own privacy policy and terms. We do not control the privacy practices of external websites. Please review their policies before sharing personal or payment information.',
+      ],
+    },
+    {
+      id: 'policy-changes',
+      title: 'Changes to This Privacy Policy',
+      paragraphs: [
+        'We may update this Privacy Policy when our services, website features, data practices, or legal obligations change.',
+        'The revised policy will be published on this page with an updated “Last updated” date. Where a change materially affects how information is used, we will take any additional notice or consent steps required by applicable law.',
+      ],
+    },
+    {
+      id: 'contact',
+      title: 'Contact and Privacy Complaints',
+      paragraphs: [
+        'If you have a question, wish to exercise a privacy-related choice, or want to raise a complaint about the handling of your information, please contact the organization using the details below.',
+        'The contact details shown here are demonstration placeholders. Replace them with the organization’s verified legal name, email address, phone number, and postal address before publication.',
+      ],
+    },
+  ],
+  contact: {
+    organization: 'DropOfHope',
+    email: 'privacy@dropofhope.org',
+    phone: '+91 00000 00000',
+    address: 'Replace with the registered office address, West Bengal, India',
+    termsLink: '/terms-and-conditions',
+  },
+}
+
+
+
+
 

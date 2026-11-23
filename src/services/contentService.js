@@ -4,7 +4,7 @@ import { homeMock, siteMock,
   galleryPageMock, donatePageMock,
   requestPageMock,memberPageMock,
   doctorPageMock,certificatePageMock,
-  organizePageMock      } from '@/data/mockData'
+  organizePageMock,privacyPageMock } from '@/data/mockData'
 
 const USE_MOCK = import.meta.env.VITE_USE_MOCK !== 'false'
 const BASE = import.meta.env.VITE_API_BASE_URL
@@ -206,6 +206,11 @@ export async function verifyCertificate(certificateId) {
 export async function getOrganizePageData() {
   await new Promise((resolve) => setTimeout(resolve, 250))
   return organizePageMock
+}
+
+export async function getPrivacyPageData() {
+  await new Promise((resolve) => setTimeout(resolve, 250))
+  return privacyPageMock
 }
 
  

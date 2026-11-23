@@ -79,12 +79,17 @@ export default createRouter({
           meta: { title: 'Organize a Blood Camp' },
           component: () => import('@/views/OrganizeCampView.vue'),
         },
+        {
+          path: 'privacy',
+          name: 'privacy',
+          meta: { title: 'Privacy Policy' },
+          component: () => import('@/views/PrivacyPolicyView.vue'),
+        },
 
         
 
 
         { path: 'search', name: 'search', meta: { title: 'Search' }, component: () => import('@/views/PlaceholderView.vue') },
-        { path: 'privacy', name: 'privacy', meta: { title: 'Privacy Policy' }, component: () => import('@/views/PlaceholderView.vue') },
         { path: 'terms', name: 'terms', meta: { title: 'Terms & Conditions' }, component: () => import('@/views/PlaceholderView.vue') },
       ],
     },
