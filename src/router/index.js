@@ -10,7 +10,7 @@ export default createRouter({
       children: [
         { path: '', name: 'home', component: () => import('@/views/HomeView.vue') },
         { path: 'donor-registration', name: 'donor-reg', component: () => import('@/views/DonorRegistrationView.vue') },
-        { path: 'camp-registration', name: 'camp-reg', meta: { title: 'Camp Registration' }, component: () => import('@/views/PlaceholderView.vue') },
+        { path: 'camp-registration', name: 'camp-reg', component: () => import('@/views/CampRegistrationView.vue') },
         { path: 'about', name: 'about', meta: { title: 'About Us' }, component: () => import('@/views/PlaceholderView.vue') },
         { path: 'blog', name: 'blog', meta: { title: 'Blog' }, component: () => import('@/views/PlaceholderView.vue') },
         { path: 'gallery', name: 'gallery', meta: { title: 'Gallery' }, component: () => import('@/views/PlaceholderView.vue') },

@@ -214,3 +214,36 @@ export const donorPageMock = {
     { id: 4, q: 'Is my personal information safe?', a: 'Your details are used only to connect you with patients in need and are never sold or shared for any other purpose.' },
   ],
 }
+
+export const campPageMock = {
+  hero: {
+    title: 'Organize a Blood Camp',
+    subtitle: 'Bring your community together to save lives. Tell us about your camp and our team will get in touch.',
+  },
+  orgTypes: ['Club', 'College / School', 'Company / Office', 'NGO', 'Religious Organization', 'Other'],
+  districts: [
+    'Alipurduar', 'Bankura', 'Birbhum', 'Cooch Behar', 'Dakshin Dinajpur', 'Darjeeling',
+    'Hooghly', 'Howrah', 'Jalpaiguri', 'Jhargram', 'Kalimpong', 'Kolkata', 'Malda',
+    'Murshidabad', 'Nadia', 'North 24 Parganas', 'Paschim Bardhaman', 'Paschim Medinipur',
+    'Purba Bardhaman', 'Purba Medinipur', 'Purulia', 'South 24 Parganas', 'Uttar Dinajpur',
+  ],
+  facilities: ['Electricity', 'Drinking water', 'Toilet', 'Seating area', 'Fan / Air conditioning', 'Parking'],
+  steps: [
+    { id: 1, title: 'Apply', text: 'Fill in the form with your organization and camp details.' },
+    { id: 2, title: 'Review', text: 'Our team checks the details and may call you to confirm.' },
+    { id: 3, title: 'Confirm', text: 'We confirm the date and assign a medical team.' },
+    { id: 4, title: 'Camp Day', text: 'We set up, collect blood and provide certificates to donors.' },
+  ],
+  checklist: [
+    'A clean, well-ventilated hall or room',
+    'Space for registration, screening, donation and rest',
+    'Promotion among members at least a week before',
+    'A few volunteers to guide donors on the day',
+  ],
+  faq: [
+    { id: 1, q: 'How many donors do we need?', a: 'We suggest at least 30 expected donors so the medical team visit is worthwhile.' },
+    { id: 2, q: 'Is there any cost to organize a camp?', a: 'No. You only provide the venue and volunteers. Please confirm details with our team.' },
+    { id: 3, q: 'How early should we apply?', a: 'Apply at least 2 to 3 weeks before your preferred date.' },
+    { id: 4, q: 'Will donors get certificates?', a: 'Yes, every donor can download a certificate from our website after the camp.' },
+  ],
+}
