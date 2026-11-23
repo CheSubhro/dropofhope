@@ -1,6 +1,7 @@
 import { homeMock, siteMock, 
   donorPageMock, campPageMock,
-  aboutPageMock,blogPageMock, } from '@/data/mockData'
+  aboutPageMock,blogPageMock,
+  galleryPageMock, } from '@/data/mockData'
 
 const USE_MOCK = import.meta.env.VITE_USE_MOCK !== 'false'
 const BASE = import.meta.env.VITE_API_BASE_URL
@@ -61,3 +62,7 @@ export const getBlogPost = async (slug) => {
   const data = await getBlogPosts()
   return data.posts.find((post) => post.slug === slug) || null
 }
+
+
+export const getGalleryData = () => request('/gallery', galleryPageMock)
+

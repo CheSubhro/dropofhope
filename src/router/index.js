@@ -34,7 +34,15 @@ export default createRouter({
         },
 
 
-        { path: 'gallery', name: 'gallery', meta: { title: 'Gallery' }, component: () => import('@/views/PlaceholderView.vue') },
+        {
+          path: 'gallery',
+          name: 'gallery',
+          meta: { title: 'Our Gallery' },
+          component: () => import('@/views/GalleryView.vue'),
+        },
+
+
+
         { path: 'donate', name: 'donate', meta: { title: 'Donate' }, component: () => import('@/views/PlaceholderView.vue') },
         { path: 'search', name: 'search', meta: { title: 'Search' }, component: () => import('@/views/PlaceholderView.vue') },
         { path: 'organize-camp', name: 'organize-camp', meta: { title: 'Organize a Blood Camp' }, component: () => import('@/views/PlaceholderView.vue') },
