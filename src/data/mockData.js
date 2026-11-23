@@ -1036,3 +1036,171 @@ export const donatePageMock = {
   },
 }
 
+
+
+const requestDistricts = [
+  'Alipurduar',
+  'Bankura',
+  'Birbhum',
+  'Cooch Behar',
+  'Dakshin Dinajpur',
+  'Darjeeling',
+  'Hooghly',
+  'Howrah',
+  'Jalpaiguri',
+  'Jhargram',
+  'Kalimpong',
+  'Kolkata',
+  'Malda',
+  'Murshidabad',
+  'Nadia',
+  'North 24 Parganas',
+  'Paschim Bardhaman',
+  'Paschim Medinipur',
+  'Purba Bardhaman',
+  'Purba Medinipur',
+  'Purulia',
+  'South 24 Parganas',
+  'Uttar Dinajpur',
+]
+
+export const requestPageMock = {
+  hero: {
+    eyebrow: 'Emergency Blood Support',
+    title: 'Request Blood for a Patient',
+    subtitle:
+      'Fill in the form below. Our team will help connect you with potential blood donors.',
+  },
+
+  helpline: {
+    number: '+919876543210',
+    display: '+91 98765 43210',
+  },
+
+  bloodGroups: [
+    'A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-',
+  ],
+
+  bloodTypes: [
+    'Whole Blood',
+    'Platelets',
+    'Plasma',
+    'Packed RBC',
+  ],
+
+  urgencyOptions: [
+    { value: 'immediate', label: 'Immediately' },
+    { value: '24-hours', label: 'Within 24 hours' },
+    { value: '3-days', label: 'Within 3 days' },
+    { value: 'scheduled', label: 'Scheduled date' },
+  ],
+
+  genders: ['Male', 'Female', 'Other'],
+
+  relations: [
+    'Self',
+    'Family',
+    'Friend',
+    'Hospital staff',
+  ],
+
+  districts: requestDistricts,
+
+  steps: [
+    {
+      id: 1,
+      title: 'Submit Request',
+      text: 'Complete the patient and hospital information.',
+    },
+    {
+      id: 2,
+      title: 'Verification',
+      text: 'Our team reviews the submitted information.',
+    },
+    {
+      id: 3,
+      title: 'Notify Donors',
+      text: 'Eligible donors may be informed about the request.',
+    },
+    {
+      id: 4,
+      title: 'Connect',
+      text: 'The requester and interested donors can coordinate.',
+    },
+  ],
+
+  compatibility: [
+    { group: 'O-', canDonate: 'All blood groups', canReceive: 'O-' },
+    { group: 'O+', canDonate: 'O+, A+, B+, AB+', canReceive: 'O-, O+' },
+    { group: 'A-', canDonate: 'A-, A+, AB-, AB+', canReceive: 'O-, A-' },
+    { group: 'A+', canDonate: 'A+, AB+', canReceive: 'O-, O+, A-, A+' },
+    { group: 'B-', canDonate: 'B-, B+, AB-, AB+', canReceive: 'O-, B-' },
+    { group: 'B+', canDonate: 'B+, AB+', canReceive: 'O-, O+, B-, B+' },
+    { group: 'AB-', canDonate: 'AB-, AB+', canReceive: 'O-, A-, B-, AB-' },
+    { group: 'AB+', canDonate: 'AB+', canReceive: 'All blood groups' },
+  ],
+
+  faq: [
+    {
+      id: 1,
+      q: 'How quickly can I get a blood donor?',
+      a: 'The response time depends on donor availability, blood group and location. We cannot guarantee a donor within a specific time.',
+    },
+    {
+      id: 2,
+      q: 'Is there any charge for submitting a request?',
+      a: 'Submitting a request through our platform is free. Hospital and blood bank charges, if any, are separate.',
+    },
+    {
+      id: 3,
+      q: 'Do I need a replacement donor?',
+      a: 'Requirements depend on the hospital and blood bank. Please confirm directly with the treating hospital.',
+    },
+    {
+      id: 4,
+      q: 'How can I cancel a request?',
+      a: 'Contact our helpline and provide your request ID so our team can assist you.',
+    },
+  ],
+
+  openRequests: [
+    {
+      id: 'REQ-100241',
+      group: 'O-',
+      units: 2,
+      bloodType: 'Packed RBC',
+      hospital: 'City General Hospital',
+      district: 'Paschim Bardhaman',
+      city: 'Durgapur',
+      urgency: 'Immediately',
+      createdAt: '2 hours ago',
+      status: 'approved',
+    },
+    {
+      id: 'REQ-100242',
+      group: 'B+',
+      units: 3,
+      bloodType: 'Whole Blood',
+      hospital: 'Medical College Hospital',
+      district: 'Paschim Bardhaman',
+      city: 'Asansol',
+      urgency: 'Within 24 hours',
+      createdAt: '5 hours ago',
+      status: 'approved',
+    },
+    {
+      id: 'REQ-100243',
+      group: 'A+',
+      units: 1,
+      bloodType: 'Platelets',
+      hospital: 'Care Nursing Home',
+      district: 'Bankura',
+      city: 'Bankura',
+      urgency: 'Within 3 days',
+      createdAt: '1 day ago',
+      status: 'approved',
+    },
+  ],
+}
+
+

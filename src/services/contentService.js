@@ -1,7 +1,8 @@
 import { homeMock, siteMock, 
   donorPageMock, campPageMock,
   aboutPageMock,blogPageMock,
-  galleryPageMock, donatePageMock, } from '@/data/mockData'
+  galleryPageMock, donatePageMock,
+  requestPageMock  } from '@/data/mockData'
 
 const USE_MOCK = import.meta.env.VITE_USE_MOCK !== 'false'
 const BASE = import.meta.env.VITE_API_BASE_URL
@@ -75,4 +76,29 @@ export const submitDonationConfirmation = (payload) =>
       'Thank you for sharing your donation details. Our team will verify your transaction and contact you.',
     submittedData: payload,
   })
+
+// Get request page data
+export async function getRequestPageData() {
+  return request('/request-blood', requestPageMock)
+}
+
+// Submit blood request
+
+export async function submitBloodRequest(payload) {
+  await new Promise((resolve) => setTimeout(resolve, 500))
+
+  const requestRecord = {
+    ...payload,
+    id: `REQ-${Date.now().toString().slice(-6)}`,
+    status: 'pending',
+    createdAt: new Date().toISOString(),
+  }
+
+  return {
+    success: true,
+    request: requestRecord,
+  }
+}
+
+ 
 
