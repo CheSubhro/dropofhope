@@ -3,7 +3,8 @@ import { homeMock, siteMock,
   aboutPageMock,blogPageMock,
   galleryPageMock, donatePageMock,
   requestPageMock,memberPageMock,
-  doctorPageMock,certificatePageMock     } from '@/data/mockData'
+  doctorPageMock,certificatePageMock,
+  organizePageMock      } from '@/data/mockData'
 
 const USE_MOCK = import.meta.env.VITE_USE_MOCK !== 'false'
 const BASE = import.meta.env.VITE_API_BASE_URL
@@ -200,6 +201,11 @@ export async function verifyCertificate(certificateId) {
       bloodGroup: record.bloodGroup,
     },
   }
+}
+
+export async function getOrganizePageData() {
+  await new Promise((resolve) => setTimeout(resolve, 250))
+  return organizePageMock
 }
 
  

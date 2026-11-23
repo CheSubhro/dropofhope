@@ -1771,6 +1771,203 @@ export const certificatePageMock = {
   ],
 }
 
+export const organizePageMock = {
+  hero: {
+    eyebrow: 'BE A LIFE SAVING ORGANIZER',
+    title: 'Organize a Blood Camp',
+    subtitle:
+      'One camp at your college, club or workplace can inspire many people to donate blood and help save lives.',
+    image: '/organize/organize-hero.jpg',
+  },
+
+  whyOrganize: [
+    {
+      icon: 'HeartHandshake',
+      title: 'Make a Real Difference',
+      description:
+        'Bring willing donors together and help connect patients with a reliable blood donation network.',
+    },
+    {
+      icon: 'Users',
+      title: 'Build Community Spirit',
+      description:
+        'Encourage teamwork, social responsibility and a culture of voluntary blood donation.',
+    },
+    {
+      icon: 'Award',
+      title: 'Appreciate Every Donor',
+      description:
+        'Help participating donors receive recognition and certificates, subject to camp verification.',
+    },
+    {
+      icon: 'Stethoscope',
+      title: 'Coordinated Support',
+      description:
+        'Coordinate with our team and an eligible blood bank or hospital for camp planning.',
+    },
+  ],
+
+  whoCanOrganize: [
+    { icon: 'Building2', title: 'Clubs & Associations', description: 'Local clubs and community groups.' },
+    { icon: 'GraduationCap', title: 'Schools & Colleges', description: 'Educational institutions and student groups.' },
+    { icon: 'BriefcaseBusiness', title: 'Companies & Offices', description: 'Corporate offices and workplace teams.' },
+    { icon: 'HeartHandshake', title: 'NGOs', description: 'Non-profit and social welfare organizations.' },
+    { icon: 'Church', title: 'Religious Organizations', description: 'Community and faith-based organizations.' },
+    { icon: 'House', title: 'Housing Societies', description: 'Residential communities and neighbourhood groups.' },
+  ],
+
+  steps: [
+    {
+      title: 'Submit Your Application',
+      text: 'Share your organization details, proposed date, venue and expected number of donors.',
+      timing: 'About 2–3 weeks before the proposed date',
+    },
+    {
+      title: 'Discussion & Verification',
+      text: 'Our team will contact you to understand the venue, arrangements and coordination requirements.',
+      timing: 'After receiving your application',
+    },
+    {
+      title: 'Confirm the Camp Plan',
+      text: 'The date, venue and arrangements will be finalized in coordination with an eligible blood bank or hospital.',
+      timing: 'Before public announcements',
+    },
+    {
+      title: 'Promote Your Camp',
+      text: 'Share the approved campaign information with your members, colleagues and local community.',
+      timing: 'Around 1–2 weeks before the camp',
+    },
+    {
+      title: 'Camp Day',
+      text: 'Help manage volunteers, venue arrangements and donor flow as per the agreed camp plan.',
+      timing: 'On the scheduled date',
+    },
+    {
+      title: 'Follow-up & Appreciation',
+      text: 'After records are verified, donor acknowledgements and certificates can be coordinated where applicable.',
+      timing: 'After the camp',
+    },
+  ],
+
+  weProvide: [
+    'Initial guidance and camp coordination',
+    'Support with planning and communication',
+    'Coordination with an eligible blood bank or hospital',
+    'Promotional content suggestions',
+    'Post-camp follow-up guidance',
+  ],
+
+  youProvide: [
+    'A suitable and accessible venue',
+    'Volunteers for local coordination',
+    'Help with community promotion',
+    'Electricity, drinking water and sanitation',
+    'A clean and comfortable waiting area',
+  ],
+
+  venueChecklist: [
+    'Adequate space for donor registration and waiting',
+    'Good ventilation and sufficient lighting',
+    'Reliable electricity supply',
+    'Clean drinking water',
+    'Accessible and clean washroom',
+    'Separate resting area for donors',
+    'Easy entry for donors and medical personnel',
+    'Safe access for equipment and vehicles',
+  ],
+
+  promoKit: [
+    {
+      type: 'WhatsApp Message',
+      title: 'Invite Your Community',
+      text: 'Be a reason someone gets another chance at life. Join our voluntary blood donation camp and help save lives. Contact the organizers for camp details and registration.',
+      description: 'A ready-to-share message for WhatsApp groups.',
+    },
+    {
+      type: 'Social Media Caption',
+      title: 'Spread the Word',
+      text: 'Every drop counts. Every donor matters. We are organizing a voluntary blood donation camp to bring our community together for a life-saving cause. Join us and make a difference!',
+      description: 'Use this caption with your approved camp poster.',
+    },
+    {
+      type: 'Poster Text',
+      title: 'Camp Poster Content',
+      text: 'VOLUNTARY BLOOD DONATION CAMP\nDonate Blood. Share Life.\nDate: [Camp Date]\nTime: [Camp Time]\nVenue: [Camp Venue]\nOrganized by: [Organization Name]\nContact: [Contact Number]',
+      description: 'Copy this text into your camp poster design.',
+    },
+  ],
+
+  stories: [
+    {
+      org: 'Community Youth Club',
+      donors: '85',
+      units: '85',
+      quote: 'A community initiative that brought local volunteers together for a meaningful cause.',
+      image: '/organize/story-community.jpg',
+    },
+    {
+      org: 'College Social Service Group',
+      donors: '62',
+      units: '62',
+      quote: 'Students came together to promote voluntary blood donation and social awareness.',
+      image: '/organize/story-college.jpg',
+    },
+    {
+      org: 'Corporate Volunteer Team',
+      donors: '48',
+      units: '48',
+      quote: 'A workplace initiative encouraging employees to participate in community service.',
+      image: '/organize/story-corporate.jpg',
+    },
+  ],
+
+  impact: [
+    { icon: 'CalendarDays', number: '45+', label: 'Camps Organized' },
+    { icon: 'Droplet', number: '8,300+', label: 'Units Collected' },
+    { icon: 'Users', number: '12,500+', label: 'Registered Donors' },
+    { icon: 'MapPinned', number: '18+', label: 'Districts Covered' },
+  ],
+
+  faq: [
+    {
+      question: 'How many donors are required to organize a camp?',
+      answer:
+        'There is no single fixed number. The expected donor count, venue capacity and feasibility will be discussed during planning with the coordinating blood bank or hospital.',
+    },
+    {
+      question: 'Is there any cost involved?',
+      answer:
+        'Costs and responsibilities depend on the camp arrangement and the participating blood bank or hospital. These details should be confirmed before the date is finalized.',
+    },
+    {
+      question: 'How early should we apply?',
+      answer:
+        'We recommend submitting your application around 2–3 weeks before the proposed date to allow time for planning and coordination.',
+    },
+    {
+      question: 'Can we organize a camp in a small venue?',
+      answer:
+        'Possibly. Venue suitability depends on the expected donor count, access, hygiene, ventilation and the requirements of the coordinating medical team.',
+    },
+    {
+      question: 'Can the camp date be changed?',
+      answer:
+        'Date changes may be possible, subject to availability and confirmation from the coordinating blood bank or hospital.',
+    },
+    {
+      question: 'Who will provide the medical team and equipment?',
+      answer:
+        'Medical personnel, collection equipment and clinical arrangements must be provided or approved by the eligible blood bank or hospital responsible for the camp.',
+    },
+  ],
+
+  cta: {
+    title: 'Ready to Organize a Blood Donation Camp?',
+    subtitle:
+      'Bring your organization and community together. Start by sharing your proposed camp details with our team.',
+  },
+}
+
 
 
 

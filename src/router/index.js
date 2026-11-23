@@ -19,7 +19,6 @@ export default createRouter({
           component: () => import('@/views/AboutView.vue'),
         },
 
-
         {
           path: 'blog',
           name: 'blog',
@@ -74,13 +73,17 @@ export default createRouter({
           meta: { title: 'Download Certificate' },
           component: () => import('@/views/DownloadCertificateView.vue'),
         },
-
+        {
+          path: 'organize-camp',
+          name: 'organize-camp',
+          meta: { title: 'Organize a Blood Camp' },
+          component: () => import('@/views/OrganizeCampView.vue'),
+        },
 
         
 
 
         { path: 'search', name: 'search', meta: { title: 'Search' }, component: () => import('@/views/PlaceholderView.vue') },
-        { path: 'organize-camp', name: 'organize-camp', meta: { title: 'Organize a Blood Camp' }, component: () => import('@/views/PlaceholderView.vue') },
         { path: 'privacy', name: 'privacy', meta: { title: 'Privacy Policy' }, component: () => import('@/views/PlaceholderView.vue') },
         { path: 'terms', name: 'terms', meta: { title: 'Terms & Conditions' }, component: () => import('@/views/PlaceholderView.vue') },
       ],
