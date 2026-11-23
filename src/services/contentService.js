@@ -3,7 +3,7 @@ import { homeMock, siteMock,
   aboutPageMock,blogPageMock,
   galleryPageMock, donatePageMock,
   requestPageMock,memberPageMock,
-  doctorPageMock    } from '@/data/mockData'
+  doctorPageMock,certificatePageMock     } from '@/data/mockData'
 
 const USE_MOCK = import.meta.env.VITE_USE_MOCK !== 'false'
 const BASE = import.meta.env.VITE_API_BASE_URL
@@ -139,6 +139,66 @@ export async function submitDoctorApplication(payload) {
   return {
     success: true,
     application,
+  }
+}
+
+export async function getCertificatePageData() {
+  await new Promise((resolve) => setTimeout(resolve, 200))
+  return certificatePageMock
+}
+
+export async function findCertificates({ method, donorId, mobile, dob }) {
+  await new Promise((resolve) => setTimeout(resolve, 700))
+
+  const normalizedMobile = String(mobile || '').replace(/\D/g, '')
+
+  let records = []
+
+  if (method === 'donorId') {
+    records = certificatePageMock.donations.filter(
+      (item) =>
+        item.donorId.toLowerCase() === String(donorId || '').trim().toLowerCase() &&
+        item.mobile === normalizedMobile,
+    )
+  }
+
+  if (method === 'mobile') {
+    records = certificatePageMock.donations.filter(
+      (item) => item.mobile === normalizedMobile && item.dob === dob,
+    )
+  }
+
+  return records
+}
+
+export async function verifyCertificate(certificateId) {
+  await new Promise((resolve) => setTimeout(resolve, 400))
+
+  const record = certificatePageMock.donations.find(
+    (item) =>
+      item.certificateId.toLowerCase() ===
+      String(certificateId || '').trim().toLowerCase(),
+  )
+
+  if (!record) {
+    return { valid: false, certificate: null }
+  }
+
+  const nameParts = record.donorName.trim().split(/\s+/)
+  const firstName = nameParts[0] || ''
+  const maskedName =
+    firstName.charAt(0) +
+    '*'.repeat(Math.max(firstName.length - 1, 1)) +
+    (nameParts.length > 1 ? ` ${nameParts[nameParts.length - 1].charAt(0)}.` : '')
+
+  return {
+    valid: true,
+    certificate: {
+      certificateId: record.certificateId,
+      donorName: maskedName,
+      donationDate: record.donationDate,
+      bloodGroup: record.bloodGroup,
+    },
   }
 }
 

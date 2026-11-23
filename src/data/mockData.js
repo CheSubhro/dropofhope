@@ -1678,6 +1678,99 @@ export const doctorPageMock = {
   },
 }
 
+export const certificatePageMock = {
+  hero: {
+    title: 'Download Your Certificate',
+    subtitle:
+      'Thank you for donating blood. Find and download your blood donation certificate here.',
+  },
+
+  orgInfo: {
+    name: 'DROP OF HOPE',
+    tagline: 'Every Drop Counts. Every Life Matters.',
+    website: 'www.dropofhope.org',
+  },
+
+  signatory: {
+    name: 'Demo Signatory',
+    designation: 'Secretary',
+  },
+
+  faq: [
+    {
+      question: 'When will I receive my certificate?',
+      answer:
+        'Certificates are generally made available a few days after the donation camp, once donation records have been verified.',
+    },
+    {
+      question: 'What should I do if my name or details are incorrect?',
+      answer:
+        'Please contact our support team with your Donor ID and certificate number to request a correction.',
+    },
+    {
+      question: 'Can I get a certificate for an earlier donation?',
+      answer:
+        'Earlier donations can be included if the donation record is available and has been verified by our team.',
+    },
+    {
+      question: 'What if I lose my certificate?',
+      answer:
+        'You can search for your certificate again using your registered details and download another copy.',
+    },
+  ],
+
+  donations: [
+    {
+      certificateId: 'CERT-2026-000123',
+      donorId: 'DOH-123456',
+      donorName: 'Rahul Sharma',
+      mobile: '9876543210',
+      dob: '1998-05-14',
+      bloodGroup: 'O+',
+      donationDate: '2026-01-15',
+      campName: 'Community Blood Donation Camp',
+      location: 'Bankura, West Bengal',
+      units: 1,
+    },
+    {
+      certificateId: 'CERT-2026-000124',
+      donorId: 'DOH-123456',
+      donorName: 'Rahul Sharma',
+      mobile: '9876543210',
+      dob: '1998-05-14',
+      bloodGroup: 'O+',
+      donationDate: '2026-08-20',
+      campName: 'Independence Day Blood Donation Camp',
+      location: 'Bankura, West Bengal',
+      units: 1,
+    },
+    {
+      certificateId: 'CERT-2026-000125',
+      donorId: 'DOH-234567',
+      donorName: 'Priya Das',
+      mobile: '9876543211',
+      dob: '1996-11-22',
+      bloodGroup: 'B+',
+      donationDate: '2026-03-10',
+      campName: 'Voluntary Blood Donation Camp',
+      location: 'Bardhaman, West Bengal',
+      units: 1,
+    },
+    {
+      certificateId: 'CERT-2026-000126',
+      donorId: 'DOH-345678',
+      donorName: 'Amit Ghosh',
+      mobile: '9876543212',
+      dob: '1995-02-08',
+      bloodGroup: 'A+',
+      donationDate: '2026-06-05',
+      campName: 'World Blood Donor Day Camp',
+      location: 'Kolkata, West Bengal',
+      units: 1,
+    },
+  ],
+}
+
 
 
 
