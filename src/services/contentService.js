@@ -2,7 +2,8 @@ import { homeMock, siteMock,
   donorPageMock, campPageMock,
   aboutPageMock,blogPageMock,
   galleryPageMock, donatePageMock,
-  requestPageMock,memberPageMock   } from '@/data/mockData'
+  requestPageMock,memberPageMock,
+  doctorPageMock    } from '@/data/mockData'
 
 const USE_MOCK = import.meta.env.VITE_USE_MOCK !== 'false'
 const BASE = import.meta.env.VITE_API_BASE_URL
@@ -110,6 +111,27 @@ export async function submitMemberApplication(payload) {
   const application = {
     ...payload,
     id: `MEM-${Date.now().toString().slice(-6)}`,
+    status: 'pending',
+    createdAt: new Date().toISOString(),
+  }
+
+  return {
+    success: true,
+    application,
+  }
+}
+
+export async function getDoctorPageData() {
+  await new Promise((resolve) => setTimeout(resolve, 300))
+  return doctorPageMock
+}
+
+export async function submitDoctorApplication(payload) {
+  await new Promise((resolve) => setTimeout(resolve, 700))
+
+  const application = {
+    ...payload,
+    id: `DOC-${Date.now().toString().slice(-6)}`,
     status: 'pending',
     createdAt: new Date().toISOString(),
   }
