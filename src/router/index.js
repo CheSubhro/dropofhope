@@ -85,12 +85,14 @@ export default createRouter({
           meta: { title: 'Privacy Policy' },
           component: () => import('@/views/PrivacyPolicyView.vue'),
         },
-
-        
-
+        {
+          path: 'terms',
+          name: 'terms',
+          meta: { title: 'Terms & Conditions' },
+          component: () => import('@/views/TermsView.vue'),
+        },
 
         { path: 'search', name: 'search', meta: { title: 'Search' }, component: () => import('@/views/PlaceholderView.vue') },
-        { path: 'terms', name: 'terms', meta: { title: 'Terms & Conditions' }, component: () => import('@/views/PlaceholderView.vue') },
       ],
     },
     // later: { path: '/admin', component: AdminLayout, meta: { requiresAuth: true }, children: [...] }

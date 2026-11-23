@@ -2140,6 +2140,259 @@ export const privacyPageMock = {
 }
 
 
+export const termsPageMock = {
+  title: 'Terms & Conditions',
+  lastUpdated: '23 November 2026',
+  intro:
+    'Welcome to DropOfHope. These Terms & Conditions explain the rules for accessing and using our website, submitting applications, requesting blood-related assistance, participating in community activities, and using the information and services made available through this platform. Please read these terms carefully before using the website.',
+  sections: [
+    {
+      id: 'acceptance-of-terms',
+      title: 'Introduction and Acceptance of Terms',
+      paragraphs: [
+        'By accessing or using the DropOfHope website, submitting a form, or using any service made available through the website, you agree to follow these Terms & Conditions and our Privacy Policy.',
+        'If you do not agree with these terms, please do not use the relevant website services. If you are submitting information on behalf of another person, you confirm that you are authorized to do so and have obtained any permission required.',
+        'These terms should be read together with any additional conditions or consent statements shown on individual forms or service pages.',
+      ],
+    },
+    {
+      id: 'about-our-platform',
+      title: 'What We Are and What We Are Not',
+      paragraphs: [
+        'DropOfHope is intended to support voluntary blood donation awareness and help connect donors, people seeking blood-related assistance, community organizers, and relevant organizations.',
+        'Unless expressly stated otherwise in a separate written agreement, DropOfHope is a communication and coordination platform. It is not a hospital, clinic, diagnostic centre, or licensed blood bank.',
+      ],
+      bullets: [
+        'We do not collect, test, store, process, transport, or directly supply blood through this website.',
+        'We do not guarantee that a donor, blood component, hospital, or blood bank will be available at a particular time or location.',
+        'We do not control the independent decisions, services, medical practices, or availability of third-party donors, hospitals, or blood banks.',
+        'Blood collection, testing, storage, compatibility assessment, and transfusion must be handled by appropriately authorized medical professionals and licensed facilities under applicable law.',
+      ],
+    },
+    {
+      id: 'medical-disclaimer',
+      title: 'Medical Disclaimer and Emergency Situations',
+      paragraphs: [
+        'Information on this website is provided for general awareness and coordination purposes. It is not medical advice, diagnosis, treatment, or a substitute for professional medical judgment.',
+        'A donor’s listed blood group or stated availability does not establish that the donor is medically eligible or that their blood is suitable for a particular patient.',
+      ],
+      bullets: [
+        'A qualified medical professional must assess donor eligibility and determine blood compatibility before donation or transfusion.',
+        'The treating hospital or licensed blood bank is responsible for clinical decisions, testing, cross-matching, collection, storage, and transfusion procedures.',
+        'Do not delay emergency medical care while waiting for a response through this website or from a listed donor.',
+        'In a life-threatening situation, contact the nearest hospital, emergency department, or appropriate emergency service immediately.',
+      ],
+    },
+    {
+      id: 'donor-terms',
+      title: 'Terms for Blood Donors',
+      paragraphs: [
+        'People registering as donors must provide accurate information and must participate voluntarily. Registration does not automatically make a person eligible to donate blood.',
+      ],
+      bullets: [
+        'Donors should meet the applicable age and medical eligibility requirements. The commonly used age range of 18–65 years is subject to current rules and the assessment of the authorized medical team.',
+        'You must provide truthful and up-to-date contact, blood group, and health-related information requested by the registration process.',
+        'You must answer medical screening questions honestly and disclose relevant information to the authorized medical team.',
+        'Donation must be voluntary. Donors must not demand or accept payment or other prohibited consideration in exchange for blood donation.',
+        'You may decline or withdraw from a donation at any time before the procedure, subject to medical guidance.',
+        'Final eligibility, donation frequency, and suitability are determined by the authorized medical team, not by website registration.',
+        'You must inform us if your contact details change or if you no longer wish to appear in the donor network.',
+      ],
+      paragraphsAfter: [
+        'Donor registration is not a promise that you will be contacted for every request or that you must accept any particular request.',
+      ],
+    },
+    {
+      id: 'blood-request-terms',
+      title: 'Terms for Blood Requesters',
+      paragraphs: [
+        'People submitting a blood request must provide genuine, accurate, and relevant information. Requests should be made only for legitimate patient needs or by someone authorized to act for the patient.',
+      ],
+      bullets: [
+        'You must provide accurate details about the required blood group, component, hospital, location, urgency, and contact person.',
+        'You must not submit false, misleading, duplicate, fraudulent, or malicious requests.',
+        'You must not use another person’s personal information without appropriate authority or permission.',
+        'Where a form asks for permission to share your contact details with relevant donors or coordinators, you should understand that choice before submitting it.',
+        'You must not harass, threaten, spam, or repeatedly contact donors who have declined or are unavailable.',
+        'You must not demand money, payment, or other prohibited consideration from donors in exchange for blood.',
+        'Any medical decision or arrangement must be confirmed directly with the treating hospital or licensed blood bank.',
+      ],
+      paragraphsAfter: [
+        'Submitting a request does not guarantee that a donor will be found or that blood will be available. Replacement donor requirements, if any, are determined by the relevant hospital or blood bank and not by this website.',
+      ],
+    },
+    {
+      id: 'camp-organizer-terms',
+      title: 'Terms for Blood Camp Organizers',
+      paragraphs: [
+        'Submitting a blood camp application is a request for consideration and coordination. It does not mean that the camp has been approved, scheduled, or medically authorized.',
+      ],
+      bullets: [
+        'Organizers must provide accurate organization, contact, venue, expected attendance, and proposed date information.',
+        'A camp date is confirmed only after the relevant coordination and written or otherwise recorded confirmation.',
+        'Organizers are responsible for providing a suitable venue and agreed local arrangements.',
+        'Organizers must obtain any local permissions, venue approvals, or other authorizations required for their part of the event.',
+        'Medical collection arrangements must be handled by an appropriately authorized blood bank or medical team.',
+        'Organizers must not independently collect, store, or distribute blood unless legally authorized to do so.',
+        'Any promotional material using the DropOfHope name or logo must follow the organization’s permission and brand-use instructions.',
+      ],
+      paragraphsAfter: [
+        'DropOfHope may postpone, decline, or cancel coordination where the venue, permissions, safety arrangements, medical coordination, or other requirements are not satisfactory.',
+      ],
+    },
+    {
+      id: 'member-volunteer-terms',
+      title: 'Terms for Members and Volunteers',
+      paragraphs: [
+        'Members and volunteers are expected to act respectfully, honestly, and responsibly while participating in activities connected with DropOfHope.',
+      ],
+      bullets: [
+        'You must follow reasonable instructions, safety requirements, and event guidelines communicated by the organization.',
+        'You must treat donors, patients, families, medical personnel, and other volunteers with dignity and respect.',
+        'You must protect personal information and must not disclose donor or patient details without authorization.',
+        'You must not make medical promises, collect money, issue official statements, or enter into agreements on behalf of DropOfHope unless specifically authorized.',
+        'You must not use the organization’s name, logo, identity, or materials for personal, political, commercial, or misleading purposes without permission.',
+        'Membership or volunteer status may be suspended or withdrawn for misconduct, fraud, misuse of information, harassment, unauthorized representation, or serious violation of these terms.',
+      ],
+      paragraphsAfter: [
+        'Membership approval, benefits, identification cards, and certificates are subject to the organization’s actual membership policy and verification process.',
+      ],
+    },
+    {
+      id: 'donations-refunds',
+      title: 'Donations and Refund Policy',
+      paragraphs: [
+        'Any financial contribution made through a payment link, UPI ID, QR code, or other payment method is intended as a voluntary contribution to support the stated organizational purpose.',
+        'Please verify the recipient name, payment details, and amount before confirming a transaction. Payment processing may be handled by an independent bank or payment service provider.',
+      ],
+      bullets: [
+        'Voluntary donations are generally non-refundable once successfully received, except where a refund is required by applicable law or approved by the organization under its verified refund process.',
+        'If you accidentally transfer money, make a duplicate payment, or believe a transaction was made in error, contact us promptly with the transaction reference and relevant details.',
+        'A UTR or transaction reference submitted through a form is not, by itself, proof that a donation has been received or verified.',
+        'Receipts or acknowledgements may be issued only after the relevant payment has been checked and confirmed.',
+        'Payment failures, reversals, disputes, and processing delays may need to be resolved with the relevant bank or payment service provider.',
+      ],
+      paragraphsAfter: [
+        'Do not share your UPI PIN, OTP, card PIN, password, or banking credentials with anyone claiming to represent DropOfHope.',
+        'The organization’s actual legal status, donation account, use of funds, tax treatment, and refund process should be verified and clearly published before accepting public donations.',
+      ],
+    },
+    {
+      id: 'certificates',
+      title: 'Certificates and Acknowledgements',
+      paragraphs: [
+        'Certificates or acknowledgements made available through the website are intended to recognize participation or activities recorded by DropOfHope, subject to verification and the organization’s applicable process.',
+      ],
+      bullets: [
+        'A certificate is an organizational acknowledgement and is not a government-issued identity document, medical record, professional qualification, or statutory licence.',
+        'Certificate information may be checked against available donation or participation records before issue or download.',
+        'You must not create, edit, forge, reproduce, sell, or misuse a certificate in a misleading manner.',
+        'If a certificate contains an error, contact us with the certificate reference and the correction requested.',
+        'We may cancel or correct a certificate where it was issued in error, obtained through false information, or altered without authorization.',
+      ],
+    },
+    {
+      id: 'prohibited-activities',
+      title: 'Prohibited Activities',
+      paragraphs: [
+        'You must use this website lawfully and must not interfere with the rights, safety, privacy, or legitimate activities of other users.',
+      ],
+      bullets: [
+        'Submitting false information, fraudulent requests, fake applications, or impersonating another person.',
+        'Using another person’s contact details, medical information, photographs, or documents without appropriate permission.',
+        'Harassing, threatening, abusing, discriminating against, or spamming donors, patients, staff, volunteers, or other users.',
+        'Offering, requesting, buying, or selling blood, organs, or other human tissue in violation of applicable law.',
+        'Using the website for scams, unauthorized fundraising, misleading advertisements, or unlawful commercial activity.',
+        'Attempting to access restricted systems, interfere with website security, introduce malicious code, or disrupt website availability.',
+        'Copying, scraping, harvesting, or redistributing personal information from the website without authorization.',
+        'Misusing the DropOfHope name, logo, identity, or materials in a way that suggests an unauthorized endorsement.',
+      ],
+    },
+    {
+      id: 'doctor-directory',
+      title: 'Doctor Directory and Third-Party Information',
+      paragraphs: [
+        'The doctor directory, where available, is provided as an informational starting point. A listing does not constitute a recommendation, endorsement, guarantee, or certification by DropOfHope.',
+      ],
+      bullets: [
+        'Users should independently verify a doctor’s identity, registration, qualifications, experience, availability, and suitability.',
+        'Consultation fees, schedules, clinic addresses, and contact details may change without notice.',
+        'An application to be listed does not guarantee publication or verification.',
+        'Any medical consultation, diagnosis, treatment, or professional relationship is between the patient and the relevant healthcare provider.',
+        'DropOfHope is not responsible for the independent medical decisions or services of listed professionals.',
+      ],
+    },
+    {
+      id: 'intellectual-property',
+      title: 'Intellectual Property and User Content',
+      paragraphs: [
+        'Unless otherwise stated, the website design, original text, graphics, logos, visual identity, and other materials created for DropOfHope belong to the organization or are used with permission.',
+        'You may view and use website content for personal, non-commercial informational purposes. You must not reproduce, modify, distribute, publish, or commercially exploit protected material without prior permission, except where permitted by law.',
+        'If you submit photographs, videos, testimonials, or other content, you confirm that you have the rights and permissions necessary to submit it.',
+        'You grant DropOfHope a limited, non-exclusive permission to review, store, and use submitted content for the specific purpose explained at the time of submission, subject to your consent and our Privacy Policy. Public publication or promotional use should require clear permission where applicable.',
+        'You must not submit content that is unlawful, misleading, defamatory, infringing, or violates another person’s privacy.',
+      ],
+    },
+    {
+      id: 'liability',
+      title: 'Limitation of Liability',
+      paragraphs: [
+        'The website and its information are provided on an “as available” basis. We aim to keep information useful and current, but we do not promise that the website will always be available, uninterrupted, error-free, or suitable for every purpose.',
+        'To the extent permitted by applicable law, DropOfHope is not responsible for losses arising from inaccurate information supplied by users, the independent actions of donors or third parties, delays in communication, temporary website interruptions, or the unavailability of a donor, hospital, blood bank, or medical service.',
+        'Nothing in these terms excludes or limits liability where such exclusion or limitation is not permitted under applicable law, including liability that cannot lawfully be excluded.',
+        'Nothing in these terms removes any rights or remedies that you may have under applicable consumer protection or other laws.',
+      ],
+    },
+    {
+      id: 'suspension-termination',
+      title: 'Suspension and Termination',
+      paragraphs: [
+        'We may review, restrict, suspend, remove, or decline an application, listing, request, or access to a website feature where we reasonably believe that these terms have been violated, information is false, consent is missing, or continued use may create safety, privacy, legal, or operational risks.',
+        'Where appropriate and legally permitted, we may contact the affected person and explain the reason for the action. You may contact us to request a review or correction.',
+        'Ending your use of the website does not automatically remove records that must be retained under applicable law or for legitimate record-keeping purposes. Please refer to our Privacy Policy for more information.',
+      ],
+    },
+    {
+      id: 'changes-to-terms',
+      title: 'Changes to These Terms',
+      paragraphs: [
+        'We may revise these Terms & Conditions when our website, services, organizational practices, or legal requirements change.',
+        'The updated version will be published on this page with a revised “Last updated” date. Continued use of the website after updated terms are published may be subject to the revised terms, to the extent permitted by applicable law.',
+        'If a change requires additional notice or consent, we will take the steps required by applicable law.',
+      ],
+    },
+    {
+      id: 'governing-law',
+      title: 'Governing Law and Dispute Resolution',
+      paragraphs: [
+        'These Terms & Conditions are intended to be governed by the laws of India, subject to applicable statutory rights and legal requirements.',
+        'If you have a concern or dispute, please contact us first so that we can attempt to resolve it through communication.',
+        'Subject to applicable law and the jurisdiction of courts that cannot lawfully be excluded, courts having competent jurisdiction in Durgapur, West Bengal, are proposed as the forum for disputes relating to these terms.',
+        'The proposed jurisdiction wording must be reviewed and confirmed by a lawyer based on the organization’s actual legal status, registered address, and applicable law before publication.',
+      ],
+    },
+    {
+      id: 'contact',
+      title: 'Contact Us',
+      paragraphs: [
+        'If you have questions about these Terms & Conditions, wish to report misuse, or need clarification about a website service, please contact DropOfHope using the details below.',
+        'The contact details shown here are demonstration placeholders. Replace them with the organization’s verified legal name, email address, phone number, and postal address before publication.',
+      ],
+    },
+  ],
+  contact: {
+    organization: 'DropOfHope',
+    email: 'info@dropofhope.org',
+    phone: '+91 00000 00000',
+    address: 'Replace with the registered office address, West Bengal, India',
+    termsLink: '/privacy',
+  },
+}
+
+
+
+
+
 
 
 
