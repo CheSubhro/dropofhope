@@ -1,4 +1,6 @@
-import { homeMock, siteMock, donorPageMock, campPageMock,aboutPageMock, } from '@/data/mockData'
+import { homeMock, siteMock, 
+  donorPageMock, campPageMock,
+  aboutPageMock,blogPageMock, } from '@/data/mockData'
 
 const USE_MOCK = import.meta.env.VITE_USE_MOCK !== 'false'
 const BASE = import.meta.env.VITE_API_BASE_URL
@@ -51,3 +53,11 @@ export async function submitCampRegistration(data) {
 
 export const getAboutPageData = () =>
   request('/about-page', aboutPageMock)
+
+
+export const getBlogPosts = () => request('/blog', blogPageMock)
+
+export const getBlogPost = async (slug) => {
+  const data = await getBlogPosts()
+  return data.posts.find((post) => post.slug === slug) || null
+}

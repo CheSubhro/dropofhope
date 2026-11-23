@@ -476,3 +476,190 @@ export const aboutPageMock = {
     },
   },
 }
+
+
+export const blogPageMock = {
+  hero: {
+    eyebrow: 'Our Blog',
+    title: 'Stories That Inspire. Knowledge That Saves Lives.',
+    subtitle:
+      'Explore blood donation awareness, donor stories, health tips and updates from our community.',
+  },
+
+  categories: [
+    { id: 'all', name: 'All' },
+    { id: 'awareness', name: 'Awareness' },
+    { id: 'donor-stories', name: 'Donor Stories' },
+    { id: 'camp-updates', name: 'Camp Updates' },
+    { id: 'health-tips', name: 'Health Tips' },
+    { id: 'news', name: 'News' },
+  ],
+
+  posts: [
+    {
+      id: 1,
+      slug: 'why-donating-blood-is-important',
+      title: 'Why Donating Blood Is More Important Than Ever',
+      excerpt:
+        'A single blood donation can help save multiple lives. Discover why regular voluntary blood donation matters.',
+      content: [
+        'Blood is one of the most important resources in healthcare. Patients undergoing surgeries, accident victims and people living with certain medical conditions may need blood transfusions to survive.',
+        'Unlike many medical resources, blood cannot be manufactured. It depends entirely on voluntary donors who are willing to help others.',
+        'Regular voluntary blood donation helps hospitals maintain a stable blood supply. It also ensures that patients can receive the support they need during emergencies.',
+        'By becoming a regular donor, you become part of a community that gives hope to people during their most difficult moments.',
+      ],
+      category: 'Awareness',
+      image: '/blog/blood-donation-awareness.jpg',
+      author: 'DropOfHope Team',
+      date: '2026-10-15',
+      readTime: '4 min read',
+      featured: true,
+    },
+    {
+      id: 2,
+      slug: 'one-donation-three-lives',
+      title: 'One Donation, The Possibility of Saving Three Lives',
+      excerpt:
+        'Learn how donated blood components can support different patients with different medical needs.',
+      content: [
+        'A whole blood donation can be separated into different components, such as red blood cells, plasma and platelets.',
+        'These components may be used for different patients depending on their medical needs and the availability of suitable products.',
+        'This is one reason why voluntary blood donation plays such an important role in healthcare.',
+      ],
+      category: 'Awareness',
+      image: '/blog/three-lives.jpg',
+      author: 'Health Desk',
+      date: '2026-10-08',
+      readTime: '3 min read',
+      featured: false,
+    },
+    {
+      id: 3,
+      slug: 'my-first-blood-donation-experience',
+      title: 'My First Blood Donation: A Story of Courage',
+      excerpt:
+        'A first-time donor shares how a simple decision became a meaningful experience.',
+      content: [
+        'I had always wanted to donate blood, but I kept postponing it because I was nervous.',
+        'When I finally visited a donation camp, the volunteers explained the process and answered my questions. Their support helped me feel comfortable.',
+        'The experience was simpler than I had imagined. More importantly, I left knowing that I had taken a small step to help someone else.',
+      ],
+      category: 'Donor Stories',
+      image: '/blog/first-donation.jpg',
+      author: 'A DropOfHope Donor',
+      date: '2026-09-28',
+      readTime: '3 min read',
+      featured: false,
+    },
+    {
+      id: 4,
+      slug: 'community-blood-donation-camp',
+      title: 'Bringing Communities Together Through Blood Donation Camps',
+      excerpt:
+        'Community-led blood donation camps help spread awareness and encourage more people to become donors.',
+      content: [
+        'A community blood donation camp is more than an event. It is an opportunity to bring people together for a shared purpose.',
+        'Well-organized camps help eligible donors learn about the donation process and connect with authorized blood collection teams.',
+        'Planning, awareness, coordination and proper medical supervision are essential for a successful camp.',
+      ],
+      category: 'Camp Updates',
+      image: '/blog/community-camp.jpg',
+      author: 'Camp Coordination Team',
+      date: '2026-09-18',
+      readTime: '4 min read',
+      featured: false,
+    },
+    {
+      id: 5,
+      slug: 'prepare-for-blood-donation',
+      title: 'How to Prepare Yourself Before Donating Blood',
+      excerpt:
+        'A few simple preparation tips can help make your donation experience more comfortable.',
+      content: [
+        'Before donating blood, make sure you are feeling well and follow the instructions provided by the blood donation team.',
+        'Have a balanced meal, drink enough water and get adequate rest. Avoid arriving at a donation session on an empty stomach.',
+        'Always answer the screening questions honestly. The medical team will assess your eligibility and guide you through the process.',
+        'If you are unsure whether you can donate, consult the authorized medical staff rather than relying on assumptions.',
+      ],
+      category: 'Health Tips',
+      image: '/blog/donation-preparation.jpg',
+      author: 'Health Desk',
+      date: '2026-09-10',
+      readTime: '5 min read',
+      featured: false,
+    },
+    {
+      id: 6,
+      slug: 'blood-donation-myths',
+      title: 'Common Blood Donation Myths You Should Stop Believing',
+      excerpt:
+        'Let us separate common misconceptions from reliable information about blood donation.',
+      content: [
+        'Misinformation can prevent eligible people from donating blood. Understanding the facts helps people make informed decisions.',
+        'Donation eligibility depends on several factors, including age, health, haemoglobin level and other screening criteria set by the blood collection service.',
+        'If you have questions about donation, speak to qualified medical staff at an authorized blood centre.',
+      ],
+      category: 'Awareness',
+      image: '/blog/donation-myths.jpg',
+      author: 'DropOfHope Team',
+      date: '2026-08-30',
+      readTime: '4 min read',
+      featured: false,
+    },
+    {
+      id: 7,
+      slug: 'dropofhope-community-update',
+      title: 'Growing Together: A DropOfHope Community Update',
+      excerpt:
+        'A look at the people, volunteers and community initiatives behind our mission.',
+      content: [
+        'Every community initiative begins with people who believe that small actions can make a meaningful difference.',
+        'We continue to work towards connecting voluntary donors, spreading awareness and supporting community blood donation initiatives.',
+        'Thank you to every donor, volunteer and supporter who contributes to this shared mission.',
+      ],
+      category: 'News',
+      image: '/blog/community-update.jpg',
+      author: 'DropOfHope Team',
+      date: '2026-08-20',
+      readTime: '3 min read',
+      featured: false,
+    },
+    {
+      id: 8,
+      slug: 'understanding-blood-groups',
+      title: 'Understanding Blood Groups and Compatibility',
+      excerpt:
+        'A beginner-friendly introduction to blood groups and why compatibility matters during transfusion.',
+      content: [
+        'Blood groups are commonly classified using the ABO and Rh systems. These classifications are important when selecting compatible blood for transfusion.',
+        'A person should never assume that a blood unit is suitable based only on a general blood group chart. Compatibility testing and clinical procedures are essential.',
+        'The hospital blood bank and qualified medical professionals determine the appropriate blood product for each patient.',
+      ],
+      category: 'Health Tips',
+      image: '/blog/blood-groups.jpg',
+      author: 'Health Desk',
+      date: '2026-08-12',
+      readTime: '5 min read',
+      featured: false,
+    },
+    {
+      id: 9,
+      slug: 'volunteers-making-a-difference',
+      title: 'The Volunteers Making a Difference Behind Every Camp',
+      excerpt:
+        'Meet the spirit of teamwork that helps community blood donation initiatives happen.',
+      content: [
+        'Behind every successful community event is a group of people working together.',
+        'Volunteers help with awareness, registration support, coordination and guiding participants through the event.',
+        'Their contribution helps create a welcoming environment and encourages more people to learn about voluntary donation.',
+      ],
+      category: 'Donor Stories',
+      image: '/blog/volunteers.jpg',
+      author: 'Community Team',
+      date: '2026-08-05',
+      readTime: '3 min read',
+      featured: false,
+    },
+  ],
+}
+

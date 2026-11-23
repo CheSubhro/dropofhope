@@ -12,14 +12,28 @@ export default createRouter({
         { path: 'donor-registration', name: 'donor-reg', component: () => import('@/views/DonorRegistrationView.vue') },
         { path: 'camp-registration', name: 'camp-reg', component: () => import('@/views/CampRegistrationView.vue') },
         
-{
-  path: 'about',
-  name: 'about',
-  meta: { title: 'About Us' },
-  component: () => import('@/views/AboutView.vue'),
-},
+        {
+          path: 'about',
+          name: 'about',
+          meta: { title: 'About Us' },
+          component: () => import('@/views/AboutView.vue'),
+        },
 
-        { path: 'blog', name: 'blog', meta: { title: 'Blog' }, component: () => import('@/views/PlaceholderView.vue') },
+
+        {
+          path: 'blog',
+          name: 'blog',
+          meta: { title: 'Our Blog' },
+          component: () => import('@/views/BlogView.vue'),
+        },
+        {
+          path: 'blog/:slug',
+          name: 'blog-post',
+          meta: { title: 'Blog Post' },
+          component: () => import('@/views/BlogPostView.vue'),
+        },
+
+
         { path: 'gallery', name: 'gallery', meta: { title: 'Gallery' }, component: () => import('@/views/PlaceholderView.vue') },
         { path: 'donate', name: 'donate', meta: { title: 'Donate' }, component: () => import('@/views/PlaceholderView.vue') },
         { path: 'search', name: 'search', meta: { title: 'Search' }, component: () => import('@/views/PlaceholderView.vue') },
