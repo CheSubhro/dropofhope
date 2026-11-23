@@ -901,3 +901,138 @@ export const galleryPageMock = {
   },
 }
 
+export const donatePageMock = {
+  hero: {
+    eyebrow: 'MAKE A DIFFERENCE',
+    title: 'Support Our Mission',
+    subtitle:
+      'Your contribution helps us organise blood donation camps, support emergencies and spread life-saving awareness.',
+  },
+
+  upi: {
+    id: 'dropofhope@upi', // DEMO: replace with your verified UPI ID
+    name: 'DropOfHope',
+    currency: 'INR',
+  },
+
+  amounts: [
+    {
+      value: 100,
+      label: '₹100',
+      description: 'Help provide basic refreshments.',
+    },
+    {
+      value: 250,
+      label: '₹250',
+      description: 'Support essential camp supplies.',
+    },
+    {
+      value: 500,
+      label: '₹500',
+      description: 'Help arrange food and water for a camp.',
+    },
+    {
+      value: 1000,
+      label: '₹1,000',
+      description: 'Support blood donation camp arrangements.',
+    },
+    {
+      value: 2500,
+      label: '₹2,500',
+      description: 'Help organise community outreach activities.',
+    },
+  ],
+
+  bank: {
+    accountName: 'DropOfHope Organisation',
+    accountNumber: '000000000000', // DEMO: replace before publishing
+    ifsc: 'DEMO0000000', // DEMO: replace before publishing
+    bankName: 'Your Bank Name',
+    branch: 'Your Branch',
+  },
+
+  fundUsage: [
+    {
+      id: 1,
+      title: 'Blood Donation Camps',
+      percentage: 40,
+      description:
+        'Organising blood donation camps and providing essential camp facilities.',
+      icon: 'heart-pulse',
+    },
+    {
+      id: 2,
+      title: 'Emergency Support',
+      percentage: 30,
+      description:
+        'Helping people connect with blood donors during urgent situations.',
+      icon: 'hand-heart',
+    },
+    {
+      id: 3,
+      title: 'Awareness Campaigns',
+      percentage: 20,
+      description:
+        'Educating communities about voluntary blood donation.',
+      icon: 'megaphone',
+    },
+    {
+      id: 4,
+      title: 'Operations',
+      percentage: 10,
+      description:
+        'Supporting the essential activities required to run our organisation.',
+      icon: 'building-2',
+    },
+  ],
+
+  trust: {
+    registrationNumber: 'To be updated',
+    taxExemption: '',
+    privacyUrl: '/privacy-policy',
+    impact: [
+      { value: '1,000+', label: 'Lives Impacted' },
+      { value: '500+', label: 'Donors Connected' },
+      { value: '50+', label: 'Camps Organised' },
+    ],
+  },
+
+  faqs: [
+    {
+      question: 'Is my donation refundable?',
+      answer:
+        'Donations are generally voluntary contributions and are not refundable. Please contact our team if you believe a payment was made by mistake.',
+    },
+    {
+      question: 'Will I receive a donation receipt?',
+      answer:
+        'After you submit your donation details, our team will verify the transaction and contact you regarding your receipt.',
+    },
+    {
+      question: 'Can I claim tax benefits on my donation?',
+      answer:
+        'Tax benefits are not currently advertised. Please contact our team to confirm eligibility before making a donation for tax purposes.',
+    },
+    {
+      question: 'Can I donate using a bank transfer?',
+      answer:
+        'Yes. You can use the bank transfer details provided on this page. Please submit your transaction details after completing the transfer.',
+    },
+  ],
+
+  cta: {
+    eyebrow: 'BE SOMEONE’S HOPE',
+    title: 'Together, We Can Save More Lives',
+    description:
+      'Your support can help us reach more people and make voluntary blood donation accessible to everyone.',
+    primaryCta: {
+      label: 'Become a Donor',
+      to: '/donor-registration',
+    },
+    secondaryCta: {
+      label: 'Contact Us',
+      to: '/contact',
+    },
+  },
+}
+

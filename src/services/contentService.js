@@ -1,7 +1,7 @@
 import { homeMock, siteMock, 
   donorPageMock, campPageMock,
   aboutPageMock,blogPageMock,
-  galleryPageMock, } from '@/data/mockData'
+  galleryPageMock, donatePageMock, } from '@/data/mockData'
 
 const USE_MOCK = import.meta.env.VITE_USE_MOCK !== 'false'
 const BASE = import.meta.env.VITE_API_BASE_URL
@@ -63,6 +63,16 @@ export const getBlogPost = async (slug) => {
   return data.posts.find((post) => post.slug === slug) || null
 }
 
-
 export const getGalleryData = () => request('/gallery', galleryPageMock)
+
+export const getDonatePageData = () =>
+  request('/donate', donatePageMock)
+
+export const submitDonationConfirmation = (payload) =>
+  request('/donation-confirmations', {
+    success: true,
+    message:
+      'Thank you for sharing your donation details. Our team will verify your transaction and contact you.',
+    submittedData: payload,
+  })
 
