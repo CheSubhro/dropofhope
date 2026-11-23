@@ -20,4 +20,7 @@
     "mongoose": "^9.12.3",
     "zod": "^4.6.7"
   },
-  "dev
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
