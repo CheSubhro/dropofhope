@@ -1204,3 +1204,151 @@ export const requestPageMock = {
 }
 
 
+export const memberPageMock = {
+  hero: {
+    eyebrow: 'BECOME A PART OF OUR MISSION',
+    title: 'Join as a Member',
+    subtitle:
+      'Become an active part of the blood donation movement. Share your time, skills, and compassion to help save lives.',
+  },
+
+  benefits: [
+    {
+      id: 1,
+      icon: 'HeartHandshake',
+      title: 'Serve the Community',
+      description:
+        'Contribute to meaningful social work and help people in need through blood donation initiatives.',
+    },
+    {
+      id: 2,
+      icon: 'GraduationCap',
+      title: 'Learn and Grow',
+      description:
+        'Develop teamwork, communication, leadership, and event coordination skills.',
+    },
+    {
+      id: 3,
+      icon: 'Award',
+      title: 'Recognition',
+      description:
+        'Receive appreciation for your contribution, subject to the organisation’s membership policy.',
+    },
+    {
+      id: 4,
+      icon: 'Users',
+      title: 'Build Connections',
+      description:
+        'Connect with volunteers and people who share the same passion for helping others.',
+    },
+  ],
+
+  membershipTypes: [
+    {
+      id: 'volunteer',
+      name: 'Volunteer',
+      subtitle: 'Be an active volunteer',
+      description:
+        'Contribute your time to blood donation camps, donor coordination, awareness activities, and community support.',
+      fee: 'Free',
+      icon: 'HandHeart',
+      features: [
+        'Participate in blood donation camps',
+        'Support donor coordination',
+        'Join community awareness activities',
+      ],
+    },
+    {
+      id: 'associate',
+      name: 'Associate Member',
+      subtitle: 'Support the movement',
+      description:
+        'Help the organisation through awareness campaigns, outreach, communication, and other support activities.',
+      fee: 'Free',
+      icon: 'Handshake',
+      features: [
+        'Support awareness campaigns',
+        'Help with outreach activities',
+        'Contribute your professional skills',
+      ],
+    },
+    {
+      id: 'life',
+      name: 'Life Member',
+      subtitle: 'Make a long-term commitment',
+      description:
+        'Stay connected with the organisation and support its long-term mission and community initiatives.',
+      fee: 'Free',
+      icon: 'ShieldCheck',
+      features: [
+        'Long-term association',
+        'Support organisational initiatives',
+        'Participate in community programmes',
+      ],
+    },
+  ],
+
+  interests: [
+    { value: 'Blood Camps', label: 'Blood Camps' },
+    { value: 'Donor Awareness', label: 'Donor Awareness' },
+    { value: 'Social Media', label: 'Social Media' },
+    { value: 'Fundraising', label: 'Fundraising' },
+    { value: 'Emergency Response', label: 'Emergency Response' },
+    { value: 'Photography/Design', label: 'Photography / Design' },
+  ],
+
+  hoursOptions: [
+    { value: '1-2', label: '1–2 hours per week' },
+    { value: '3-5', label: '3–5 hours per week' },
+    { value: '6+', label: '6+ hours per week' },
+  ],
+
+  professions: [
+    'Student',
+    'Teacher',
+    'Healthcare Professional',
+    'Private Employee',
+    'Government Employee',
+    'Business Owner',
+    'Self Employed',
+    'Homemaker',
+    'Other',
+  ],
+
+  genders: ['Male', 'Female', 'Other', 'Prefer not to say'],
+
+  bloodGroups: requestPageMock.bloodGroups,
+
+  districts: requestPageMock.districts,
+
+  faqs: [
+    {
+      question: 'Do I have to donate blood to become a member?',
+      answer:
+        'No. You do not have to donate blood to become a member. You can contribute through volunteering, awareness activities, event support, and other skills.',
+    },
+    {
+      question: 'Is there any membership fee?',
+      answer:
+        'No. All three membership categories are currently free. There is no membership fee at the time of application.',
+    },
+    {
+      question: 'How much time do I need to contribute?',
+      answer:
+        'You can select the time you can realistically contribute each week. We understand that availability may vary depending on your schedule.',
+    },
+    {
+      question: 'Will I receive a membership ID card?',
+      answer:
+        'Membership details and any ID card or certificate will be considered after your application is reviewed and approved, according to the organisation’s policy.',
+    },
+    {
+      question: 'Can I choose more than one area of interest?',
+      answer:
+        'Yes. You can select multiple areas where you would like to contribute.',
+    },
+  ],
+}
+
+
+

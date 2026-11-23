@@ -2,7 +2,7 @@ import { homeMock, siteMock,
   donorPageMock, campPageMock,
   aboutPageMock,blogPageMock,
   galleryPageMock, donatePageMock,
-  requestPageMock  } from '@/data/mockData'
+  requestPageMock,memberPageMock   } from '@/data/mockData'
 
 const USE_MOCK = import.meta.env.VITE_USE_MOCK !== 'false'
 const BASE = import.meta.env.VITE_API_BASE_URL
@@ -97,6 +97,26 @@ export async function submitBloodRequest(payload) {
   return {
     success: true,
     request: requestRecord,
+  }
+}
+
+export const getMemberPageData = () => {
+  return request('/join-member', memberPageMock)
+}
+
+export async function submitMemberApplication(payload) {
+  await new Promise((resolve) => setTimeout(resolve, 700))
+
+  const application = {
+    ...payload,
+    id: `MEM-${Date.now().toString().slice(-6)}`,
+    status: 'pending',
+    createdAt: new Date().toISOString(),
+  }
+
+  return {
+    success: true,
+    application,
   }
 }
 

@@ -72,6 +72,15 @@
 
 @layer components {
 
+
+    .form-label {
+        @apply mb-2 block text-sm font-semibold text-slate-800;
+    }
+
+    .form-input {
+        @apply w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-slate-800 outline-none transition placeholder:text-slate-500 focus:border-[#E80E0E] focus:ring-2 focus:ring-red-100;
+    }
+
     .text-readable {
         color: #334155;
         font-weight: 500;
