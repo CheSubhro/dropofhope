@@ -53,10 +53,13 @@ onBeforeUnmount(() => observer?.disconnect())
           <span class="flex h-12 w-12 items-center justify-center rounded-full bg-white/15">
             <component :is="icons[item.icon]" :size="24" />
           </span>
-          <p class="mt-4 text-3xl font-extrabold tabular-nums sm:text-4xl">
-            {{ counts[i].toLocaleString() }}+
+          <p class="impact-number mt-4">
+              {{ counts[i].toLocaleString() }}+
           </p>
-          <p class="mt-1 text-sm font-medium text-white/80">{{ item.label }}</p>
+
+          <p class="impact-label mt-2">
+              {{ item.label }}
+          </p>
         </div>
       </div>
     </div>
