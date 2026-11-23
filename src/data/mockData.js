@@ -247,3 +247,232 @@ export const campPageMock = {
     { id: 4, q: 'Will donors get certificates?', a: 'Yes, every donor can download a certificate from our website after the camp.' },
   ],
 }
+
+
+export const aboutPageMock = {
+  hero: {
+    eyebrow: 'Get to know us',
+    title: 'About DropOfHope',
+    subtitle:
+      'A community-driven voluntary blood donation network connecting compassionate donors with people who need blood.',
+    breadcrumb: [
+      { label: 'Home', to: '/' },
+      { label: 'About Us', to: null },
+    ],
+  },
+
+  story: {
+    eyebrow: 'Who We Are',
+    title: 'Every Drop Has a Story. Every Donor Makes a Difference.',
+    paragraphs: [
+      'DropOfHope is a community-driven voluntary blood donation platform built on the belief that no life should be lost because of a shortage of blood.',
+      'We connect willing blood donors with patients in need, organize community blood donation camps and encourage people to become regular voluntary donors.',
+      'Our mission is to build a compassionate network where technology, community participation and humanity come together to save lives.',
+    ],
+    image: '/about/story.jpg',
+    imageAlt: 'DropOfHope volunteers working together',
+    badge: 'Together We Save Lives',
+  },
+
+  mission: {
+    eyebrow: 'Our Mission',
+    title: 'Making Blood Available When It Matters Most',
+    description:
+      'To build a reliable and accessible voluntary blood donation network that connects donors with patients, supports hospitals and promotes safe blood donation.',
+    icon: 'Target',
+  },
+
+  vision: {
+    eyebrow: 'Our Vision',
+    title: 'A World Where No One Waits for Blood',
+    description:
+      'To create a society where every eligible individual understands the importance of blood donation and every patient can access blood when needed.',
+    icon: 'Eye',
+  },
+
+  values: [
+    {
+      id: 1,
+      title: 'Humanity',
+      description: 'Putting human lives and dignity first.',
+      icon: 'HeartHandshake',
+    },
+    {
+      id: 2,
+      title: 'Transparency',
+      description: 'Building trust through honest actions.',
+      icon: 'ShieldCheck',
+    },
+    {
+      id: 3,
+      title: 'Compassion',
+      description: 'Standing beside people in difficult times.',
+      icon: 'HandHeart',
+    },
+    {
+      id: 4,
+      title: 'Quick Response',
+      description: 'Connecting donors and patients without delay.',
+      icon: 'Zap',
+    },
+  ],
+
+  services: [
+    {
+      id: 1,
+      title: 'Donor Registration',
+      description:
+        'Register yourself as a voluntary blood donor and become part of our life-saving community.',
+      icon: 'UserPlus',
+      link: { label: 'Register Now', to: '/donor-registration' },
+    },
+    {
+      id: 2,
+      title: 'Blood Camps',
+      description:
+        'Bring your community together by organizing safe and meaningful blood donation camps.',
+      icon: 'Tent',
+      link: { label: 'Organize a Camp', to: '/organize-camp' },
+    },
+    {
+      id: 3,
+      title: 'Emergency Blood Request',
+      description:
+        'Help patients connect with suitable blood donors during emergency situations.',
+      icon: 'Droplet',
+      link: { label: 'Request Blood', to: '/request-blood' },
+    },
+    {
+      id: 4,
+      title: 'Donor Certificates',
+      description:
+        'Recognize and appreciate the contribution of voluntary blood donors.',
+      icon: 'Award',
+      link: { label: 'Get Certificate', to: '/download-certificate' },
+    },
+  ],
+
+  timeline: [
+    {
+      id: 1,
+      year: '2022',
+      title: 'The Beginning',
+      description:
+        'The idea of building a community-driven blood donation network was born.',
+      icon: 'Lightbulb',
+    },
+    {
+      id: 2,
+      year: '2023',
+      title: 'First Blood Camp',
+      description:
+        'Our first community blood donation initiative brought volunteers together.',
+      icon: 'Users',
+    },
+    {
+      id: 3,
+      year: '2024',
+      title: 'Growing Community',
+      description:
+        'More donors and volunteers joined our mission to support patients in need.',
+      icon: 'TrendingUp',
+    },
+    {
+      id: 4,
+      year: '2025',
+      title: 'Expanding Our Reach',
+      description:
+        'We continued expanding our donor network and community partnerships.',
+      icon: 'Globe',
+    },
+  ],
+
+  team: [
+    {
+      id: 1,
+      group: 'Founders',
+      name: 'Founder Name',
+      role: 'Founder & President',
+      bio: 'Leading the vision of building a community that saves lives.',
+      image: '/about/team/member1.jpg',
+    },
+    {
+      id: 2,
+      group: 'Founders',
+      name: 'Co-Founder Name',
+      role: 'Co-Founder',
+      bio: 'Building meaningful connections between donors and patients.',
+      image: '/about/team/member2.jpg',
+    },
+    {
+      id: 3,
+      group: 'Core Committee',
+      name: 'Member Name',
+      role: 'Operations Coordinator',
+      bio: 'Managing daily operations and community activities.',
+      image: '/about/team/member3.jpg',
+    },
+    {
+      id: 4,
+      group: 'Core Committee',
+      name: 'Member Name',
+      role: 'Volunteer Coordinator',
+      bio: 'Supporting and coordinating our volunteer community.',
+      image: '/about/team/member4.jpg',
+    },
+    {
+      id: 5,
+      group: 'Volunteers',
+      name: 'Volunteer Name',
+      role: 'Community Volunteer',
+      bio: 'Helping spread awareness about voluntary blood donation.',
+      image: '/about/team/member5.jpg',
+    },
+    {
+      id: 6,
+      group: 'Volunteers',
+      name: 'Volunteer Name',
+      role: 'Camp Volunteer',
+      bio: 'Supporting blood donation camps and community initiatives.',
+      image: '/about/team/member6.jpg',
+    },
+  ],
+
+  partners: [
+    {
+      id: 1,
+      name: 'City General Hospital',
+      logo: '/about/partners/partner1.png',
+    },
+    {
+      id: 2,
+      name: 'Community Health Center',
+      logo: '/about/partners/partner2.png',
+    },
+    {
+      id: 3,
+      name: 'Life Care Hospital',
+      logo: '/about/partners/partner3.png',
+    },
+    {
+      id: 4,
+      name: 'Social Welfare Foundation',
+      logo: '/about/partners/partner4.png',
+    },
+  ],
+
+  cta: {
+    eyebrow: 'Be Someone’s Hope',
+    title: 'Your One Small Step Can Save a Life.',
+    description:
+      'Join our mission. Become a voluntary blood donor or bring your community together by organizing a blood donation camp.',
+    primaryCta: {
+      label: 'Become a Donor',
+      to: '/donor-registration',
+    },
+    secondaryCta: {
+      label: 'Organize a Camp',
+      to: '/organize-camp',
+    },
+  },
+}

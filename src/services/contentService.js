@@ -1,4 +1,4 @@
-import { homeMock, siteMock, donorPageMock, campPageMock } from '@/data/mockData'
+import { homeMock, siteMock, donorPageMock, campPageMock,aboutPageMock, } from '@/data/mockData'
 
 const USE_MOCK = import.meta.env.VITE_USE_MOCK !== 'false'
 const BASE = import.meta.env.VITE_API_BASE_URL
@@ -48,3 +48,6 @@ export async function submitCampRegistration(data) {
   if (!res.ok) throw new Error(`Request failed: ${res.status}`)
   return res.json() 
 }
+
+export const getAboutPageData = () =>
+  request('/about-page', aboutPageMock)
