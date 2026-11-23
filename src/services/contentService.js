@@ -1,4 +1,4 @@
-import { homeMock, siteMock } from '@/data/mockData'
+import { homeMock, siteMock, donorPageMock } from '@/data/mockData'
 
 const USE_MOCK = import.meta.env.VITE_USE_MOCK !== 'false'
 const BASE = import.meta.env.VITE_API_BASE_URL
@@ -16,3 +16,19 @@ async function request(path, mock) {
 
 export const getSiteConfig = () => request('/site', siteMock)
 export const getHomeData = () => request('/home', homeMock)
+
+export const getDonorPageData = () => request('/donor-page', donorPageMock)
+
+export async function submitDonorRegistration(data) {
+  if (USE_MOCK) {
+    await delay(2000) 
+    return { success: true, donorId: 'DOH-' + Math.floor(100000 + Math.random() * 900000) }
+  }
+  const res = await fetch(`${BASE}/donors`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data),
+  })
+  if (!res.ok) throw new Error(`Request failed: ${res.status}`)
+  return res.json() 
+}

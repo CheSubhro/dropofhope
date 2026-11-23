@@ -187,3 +187,30 @@ export const homeMock = {
     ],
   },
 }
+
+export const donorPageMock = {
+  hero: {
+    title: 'Become a Blood Donor',
+    subtitle: 'Fill in the form below. Your one donation can save up to three lives.',
+  },
+  bloodGroups: ['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'],
+  districts: [
+    'Alipurduar', 'Bankura', 'Birbhum', 'Cooch Behar', 'Dakshin Dinajpur', 'Darjeeling',
+    'Hooghly', 'Howrah', 'Jalpaiguri', 'Jhargram', 'Kalimpong', 'Kolkata', 'Malda',
+    'Murshidabad', 'Nadia', 'North 24 Parganas', 'Paschim Bardhaman', 'Paschim Medinipur',
+    'Purba Bardhaman', 'Purba Medinipur', 'Purulia', 'South 24 Parganas', 'Uttar Dinajpur',
+  ],
+  eligibility: [
+    'Age between 18 and 65 years',
+    'Weight 45 kg or more',
+    'Hemoglobin 12.5 g/dL or more',
+    'At least 3 months since your last donation',
+    'No fever, infection or serious illness at present',
+  ],
+  faq: [
+    { id: 1, q: 'Will I feel weak after donating blood?', a: 'Most people feel fine. Rest for a few minutes, drink water and eat something light. Your body replaces the donated blood within days.' },
+    { id: 2, q: 'How long does a donation take?', a: 'The donation itself takes about 10 to 15 minutes. With registration and rest, plan for around 45 minutes.' },
+    { id: 3, q: 'How often can I donate?', a: 'You can donate whole blood once every 3 months.' },
+    { id: 4, q: 'Is my personal information safe?', a: 'Your details are used only to connect you with patients in need and are never sold or shared for any other purpose.' },
+  ],
+}
