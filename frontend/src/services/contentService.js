@@ -1,93 +1,168 @@
-import { homeMock, siteMock, 
-  donorPageMock, campPageMock,
-  aboutPageMock,blogPageMock,
-  galleryPageMock, donatePageMock,
-  requestPageMock,memberPageMock,
-  doctorPageMock,certificatePageMock,
-  organizePageMock,privacyPageMock,termsPageMock } from '@/data/mockData'
+
+import {
+  homeMock,
+  siteMock,
+  donorPageMock,
+  campPageMock,
+  aboutPageMock,
+  blogPageMock,
+  galleryPageMock,
+  donatePageMock,
+  requestPageMock,
+  memberPageMock,
+  doctorPageMock,
+  certificatePageMock,
+  organizePageMock,
+  privacyPageMock,
+  termsPageMock,
+} from '@/data/mockData'
 
 const USE_MOCK = import.meta.env.VITE_USE_MOCK !== 'false'
-const BASE = import.meta.env.VITE_API_BASE_URL
-const delay = (ms) => new Promise((r) => setTimeout(r, ms))
+const BASE = (import.meta.env.VITE_API_BASE_URL || '').replace(/\/$/, '')
 
-async function request(path, mock) {
-  if (USE_MOCK) {
-    await delay(400) // simulate network latency
+const LIVE_ENDPOINTS = (
+  import.meta.env.VITE_LIVE_ENDPOINTS || ''
+)
+  .split(',')
+  .map((item) => item.trim().toLowerCase())
+  .filter(Boolean)
+
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
+
+function shouldUseMock(endpoint) {
+  if (!USE_MOCK) return false
+
+  return !LIVE_ENDPOINTS.includes(endpoint.toLowerCase())
+}
+
+async function parseResponse(res) {
+  const data = await res.json().catch(() => ({}))
+
+  if (!res.ok) {
+    const error = new Error(
+      data.message || `Request failed: ${res.status}`,
+    )
+
+    error.status = res.status
+    error.errors = Array.isArray(data.errors) ? data.errors : []
+
+    throw error
+  }
+
+  return data
+}
+
+async function request(path, mock, endpoint) {
+  if (shouldUseMock(endpoint)) {
+    await delay(400)
     return structuredClone(mock)
   }
+
+  if (!BASE) {
+    throw new Error('API base URL is not configured.')
+  }
+
   const res = await fetch(`${BASE}${path}`)
-  if (!res.ok) throw new Error(`Request failed: ${res.status}`)
-  return res.json()
+  return parseResponse(res)
 }
 
-export const getSiteConfig = () => request('/site', siteMock)
-export const getHomeData = () => request('/home', homeMock)
+async function postRequest(path, data, endpoint, mockResponse, mockDelay = 2000) {
+  if (shouldUseMock(endpoint)) {
+    await delay(mockDelay)
+    return structuredClone(mockResponse)
+  }
 
-export const getDonorPageData = () => request('/donor-page', donorPageMock)
+  if (!BASE) {
+    throw new Error('API base URL is not configured.')
+  }
+
+  const res = await fetch(`${BASE}${path}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+
+  return parseResponse(res)
+}
+
+export const getSiteConfig = () =>
+  request('/site', siteMock, 'site')
+
+export const getHomeData = () =>
+  request('/home', homeMock, 'home')
+
+export const getDonorPageData = () =>
+  request('/donor-page', donorPageMock, 'donor-page')
 
 export async function submitDonorRegistration(data) {
-  if (USE_MOCK) {
-    await delay(2000) 
-    return { success: true, donorId: 'DOH-' + Math.floor(100000 + Math.random() * 900000) }
+  const mockResponse = {
+    success: true,
+    donorId: `DOH-${Math.floor(100000 + Math.random() * 900000)}`,
   }
-  const res = await fetch(`${BASE}/donors`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data),
-  })
-  if (!res.ok) throw new Error(`Request failed: ${res.status}`)
-  return res.json() 
+
+  return postRequest(
+    '/donors',
+    data,
+    'donors',
+    mockResponse,
+  )
 }
 
-export const getCampPageData = () => request('/camp-page', campPageMock)
+export const getCampPageData = () =>
+  request('/camp-page', campPageMock, 'camp-page')
 
 export async function submitCampRegistration(data) {
-  if (USE_MOCK) {
-    await delay(2000)
-    return { success: true, applicationId: 'CAMP-' + Math.floor(100000 + Math.random() * 900000) }
+  const mockResponse = {
+    success: true,
+    applicationId: `CAMP-${Math.floor(100000 + Math.random() * 900000)}`,
   }
-  const res = await fetch(`${BASE}/camps`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data),
-  })
-  if (!res.ok) throw new Error(`Request failed: ${res.status}`)
-  return res.json() 
+
+  return postRequest(
+    '/camps',
+    data,
+    'camps',
+    mockResponse,
+  )
 }
 
 export const getAboutPageData = () =>
-  request('/about-page', aboutPageMock)
+  request('/about-page', aboutPageMock, 'about-page')
 
-
-export const getBlogPosts = () => request('/blog', blogPageMock)
+export const getBlogPosts = () =>
+  request('/blog', blogPageMock, 'blog')
 
 export const getBlogPost = async (slug) => {
   const data = await getBlogPosts()
   return data.posts.find((post) => post.slug === slug) || null
 }
 
-export const getGalleryData = () => request('/gallery', galleryPageMock)
+export const getGalleryData = () =>
+  request('/gallery', galleryPageMock, 'gallery')
 
 export const getDonatePageData = () =>
-  request('/donate', donatePageMock)
+  request('/donate', donatePageMock, 'donate')
 
 export const submitDonationConfirmation = (payload) =>
-  request('/donation-confirmations', {
-    success: true,
-    message:
-      'Thank you for sharing your donation details. Our team will verify your transaction and contact you.',
-    submittedData: payload,
-  })
+  postRequest(
+    '/donation-confirmations',
+    payload,
+    'donations',
+    {
+      success: true,
+      message:
+        'Thank you for sharing your donation details. Our team will verify your transaction and contact you.',
+      submittedData: payload,
+    },
+  )
 
-// Get request page data
 export async function getRequestPageData() {
-  return request('/request-blood', requestPageMock)
+  return request('/request-blood', requestPageMock, 'request-blood')
 }
 
-// Submit blood request
-
 export async function submitBloodRequest(payload) {
-  await new Promise((resolve) => setTimeout(resolve, 500))
+  await delay(500)
 
   const requestRecord = {
     ...payload,
@@ -102,54 +177,60 @@ export async function submitBloodRequest(payload) {
   }
 }
 
-export const getMemberPageData = () => {
-  return request('/join-member', memberPageMock)
-}
+export const getMemberPageData = () =>
+  request('/join-member', memberPageMock, 'join-member')
+
 
 export async function submitMemberApplication(payload) {
-  await new Promise((resolve) => setTimeout(resolve, 700))
-
-  const application = {
-    ...payload,
-    id: `MEM-${Date.now().toString().slice(-6)}`,
-    status: 'pending',
-    createdAt: new Date().toISOString(),
-  }
-
-  return {
+  const mockResponse = {
     success: true,
-    application,
+    application: {
+      id: `MEM-${Date.now().toString().slice(-6)}`,
+      status: 'pending',
+      createdAt: new Date().toISOString(),
+    },
   }
+
+  return postRequest(
+    '/members',
+    payload,
+    'members',
+    mockResponse,
+  )
 }
 
+
 export async function getDoctorPageData() {
-  await new Promise((resolve) => setTimeout(resolve, 300))
+  await delay(300)
   return doctorPageMock
 }
 
 export async function submitDoctorApplication(payload) {
-  await new Promise((resolve) => setTimeout(resolve, 700))
-
-  const application = {
-    ...payload,
-    id: `DOC-${Date.now().toString().slice(-6)}`,
-    status: 'pending',
-    createdAt: new Date().toISOString(),
-  }
-
-  return {
+  const mockResponse = {
     success: true,
-    application,
+    application: {
+      ...payload,
+      id: `DOC-${Date.now().toString().slice(-6)}`,
+      status: 'pending',
+      createdAt: new Date().toISOString(),
+    },
   }
+
+  return postRequest(
+    '/doctors',
+    payload,
+    'doctors',
+    mockResponse,
+  )
 }
 
 export async function getCertificatePageData() {
-  await new Promise((resolve) => setTimeout(resolve, 200))
+  await delay(200)
   return certificatePageMock
 }
 
 export async function findCertificates({ method, donorId, mobile, dob }) {
-  await new Promise((resolve) => setTimeout(resolve, 700))
+  await delay(700)
 
   const normalizedMobile = String(mobile || '').replace(/\D/g, '')
 
@@ -158,7 +239,8 @@ export async function findCertificates({ method, donorId, mobile, dob }) {
   if (method === 'donorId') {
     records = certificatePageMock.donations.filter(
       (item) =>
-        item.donorId.toLowerCase() === String(donorId || '').trim().toLowerCase() &&
+        item.donorId.toLowerCase() ===
+          String(donorId || '').trim().toLowerCase() &&
         item.mobile === normalizedMobile,
     )
   }
@@ -173,7 +255,7 @@ export async function findCertificates({ method, donorId, mobile, dob }) {
 }
 
 export async function verifyCertificate(certificateId) {
-  await new Promise((resolve) => setTimeout(resolve, 400))
+  await delay(400)
 
   const record = certificatePageMock.donations.find(
     (item) =>
@@ -182,15 +264,21 @@ export async function verifyCertificate(certificateId) {
   )
 
   if (!record) {
-    return { valid: false, certificate: null }
+    return {
+      valid: false,
+      certificate: null,
+    }
   }
 
   const nameParts = record.donorName.trim().split(/\s+/)
   const firstName = nameParts[0] || ''
+
   const maskedName =
     firstName.charAt(0) +
     '*'.repeat(Math.max(firstName.length - 1, 1)) +
-    (nameParts.length > 1 ? ` ${nameParts[nameParts.length - 1].charAt(0)}.` : '')
+    (nameParts.length > 1
+      ? ` ${nameParts[nameParts.length - 1].charAt(0)}.`
+      : '')
 
   return {
     valid: true,
@@ -204,20 +292,16 @@ export async function verifyCertificate(certificateId) {
 }
 
 export async function getOrganizePageData() {
-  await new Promise((resolve) => setTimeout(resolve, 250))
+  await delay(250)
   return organizePageMock
 }
 
 export async function getPrivacyPageData() {
-  await new Promise((resolve) => setTimeout(resolve, 250))
+  await delay(250)
   return privacyPageMock
 }
 
 export async function getTermsPageData() {
-  await new Promise((resolve) => setTimeout(resolve, 250))
+  await delay(250)
   return termsPageMock
 }
-
-
- 
-
